@@ -45,12 +45,128 @@ Working definition of an emerging artist: An artist with a relatively small init
 ### Working definition of continued engagement
 A listener demonstrates continued engagement when they return to an artist after initial discovery, such as listening again within a defined time window, listening on multiple days, or exploring multiple tracks by the same artist.
 
+# Member 2: Andy Chen — ListenBrainz Data Exploration Lead
 
+## Source
 
+ListenBrainz public API (https://api.listenbrainz.org), endpoint
+`GET /1/user/{username}/listens`. No authentication is required; ListenBrainz
+publishes listen data under CC0.
 
+We did not use the bulk data dumps at https://listenbrainz.org/data/, which
+contain every listen ever submitted to ListenBrainz and which ListenBrainz's
+own documentation describes as a large download that is hard to manage.
+Sampling through the API keeps the extract small: it returns a maximum of 100
+listens per request and can be paged backwards in time with the `max_ts`
+parameter. Users were found through the ListenBrainz user-search endpoint
+(`GET /1/search/users/`) and filtered to those with at least 50 listens.
+Retrieved 21 September 2026.
 
+## What One Row Represents
 
+One listen event: a single user playing a single track at a single point in
+time. Rows are not unique per user or per track — a user who plays the same
+track three times produces three rows, distinguished by `listened_at`.
 
+## Sample Size, Listeners, and Artists
+
+| Measure | Value |
+|---|---|
+| Listens (rows) | 1,940 |
+| Columns | 9 |
+| Unique listeners | 5 |
+| Unique artists (by `artist_name`) | 756 |
+| Unique artists (by resolved MBID) | 437 |
+
+The two artist counts differ because 39% of listens carry no MusicBrainz
+identifier, and because `artist_name` is free text that varies between
+submissions. The sample contains "Takanashi Yasuharu / -yaiba-" and "Yasuharu
+Takanashi / -yaiba-" as separate names for the same artist, so the 756 figure
+is an upper bound rather than a true artist count.
+
+Listens per user:
+
+| User | Listens |
+|---|---|
+| iliekcomputers | 500 |
+| H-music | 500 |
+| s_john_s | 500 |
+| John V | 226 |
+| music_af | 214 |
+
+Three users hit the 500-listen ceiling we requested, so their histories extend
+further back than this extract captures.
+
+## Date Range
+
+Overall timestamps run from **7 March 2019 to 21 September 2026**. This is not
+continuous coverage. Each user contributes a separate window of recent
+activity, and those windows fall in different years:
+
+| User | First listen | Last listen | Days covered | Distinct months |
+|---|---|---|---|---|
+| music_af | 2025-09-17 | 2026-03-25 | 189 | 7 |
+| H-music | 2019-07-15 | 2019-11-15 | 123 | 5 |
+| iliekcomputers | 2024-11-16 | 2024-12-16 | 30 | 2 |
+| s_john_s | 2019-03-07 | 2019-03-20 | 13 | 1 |
+| John V | 2026-09-17 | 2026-09-21 | 4 | 1 |
+
+There is no time period during which all five users are observed together.
+
+## Relevant Columns
+
+| Column (source) | What it contains | How it supports the analysis |
+|---|---|---|
+| `username` (listens) | ListenBrainz user who submitted the listen | Identifies the listener; basis for counting distinct listeners |
+| `listened_at` (listens) | Unix timestamp of the play, converted to datetime | Orders listens in time; supports time-based grouping and gaps between listens |
+| `track_name` (listens) | Track title as submitted | Counting distinct tracks per listener and artist |
+| `artist_name` (listens) | Artist name as submitted (free text) | Display label; grouping where no identifier exists |
+| `release_name` (listens) | Album or release title | Release-level context |
+| `recording_msid` (listens) | ListenBrainz's own identifier for the submitted recording | Present on every row; identifies the listen's recording within ListenBrainz |
+| `artist_mbids` (listens, within `mbid_mapping`) | MusicBrainz artist identifiers, as a list | Identifies artists more consistently than free-text names |
+| `recording_mbid` (listens, within `mbid_mapping`) | MusicBrainz recording identifier | Identifies specific recordings |
+| `release_mbid` (listens, within `mbid_mapping`) | MusicBrainz release identifier | Identifies specific releases |
+
+The last three come from the `mbid_mapping` object inside each listen record,
+not from `additional_info`. ListenBrainz documentation notes that
+`mbid_mapping` values are resolved by ListenBrainz itself, while
+`additional_info` values are submitted by the user's listening client and are
+not validated. `mbid_mapping` is absent entirely when ListenBrainz cannot
+resolve a listen, which is why these three columns share a similar missing rate.
+
+## Missing Values
+
+| Column | Missing | % of sample |
+|---|---|---|
+| `username` | 0 | 0% |
+| `listened_at` | 0 | 0% |
+| `track_name` | 0 | 0% |
+| `artist_name` | 0 | 0% |
+| `recording_msid` | 0 | 0% |
+| `recording_mbid` | 728 | 38% |
+| `release_name` | 754 | 39% |
+| `artist_mbids` | 759 | 39% |
+| `release_mbid` | 759 | 39% |
+
+The four core fields are complete on every row. The identifier fields are not,
+and the gap is concentrated by user rather than spread evenly:
+
+| User | Listens with a resolved artist MBID |
+|---|---|
+| music_af | 213/214 (100%) |
+| iliekcomputers | 388/500 (78%) |
+| s_john_s | 353/500 (71%) |
+| H-music | 191/500 (38%) |
+| John V | 36/226 (16%) |
+
+Any analysis restricted to rows with identifiers will therefore contain a very
+different mix of users than the full extract.
+
+## Reproducing This
+
+`pull_listenbrainz_sample.py` retrieves the sample and writes
+`listenbrainz_sample.csv`. `explore_sample.py` produces every figure reported
+above. The CSV is excluded from version control via `.gitignore`.
 
 
 # Member 3 Shivanee Kooner – MusicBrainz & Data Column Lead
