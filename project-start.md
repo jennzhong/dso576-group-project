@@ -33,7 +33,7 @@ We confirmed that these public data sources are available for us to begin explor
 3. How reliably can ListenBrainz listening records be connected to MusicBrainz artist and release metadata?
 
 
-##Phase 1 Final Vision
+## Phase 1 Final Vision
 ### Our Project Vision and Usage Example
 A music-streaming editorial team must decide which emerging artists should receive additional exposure and which listener segments are most likely to continue engaging with those artists after discovery.
 
