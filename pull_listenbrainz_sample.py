@@ -45,3 +45,4 @@ match_by_user = df.groupby("username")["artist_mbids"].apply(
     lambda s: f"{s.notna().sum()}/{len(s)} ({s.notna().mean():.0%})"
 )
 print(match_by_user)
+print("hello")
