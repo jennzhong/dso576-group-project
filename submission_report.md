@@ -4,7 +4,7 @@
 
 - **GitHub branch:** `lewis-li`
 - **Branch URL:** [lewis-li](https://github.com/jennzhong/dso576-group-project/tree/lewis-li)
-- **Submitted commit ID:** [ADD AFTER FINAL CODE COMMIT]
+- **Final code commit ID:** `c10ad7379338e783f780ae20a81073fa1f9a4bd5`
 
 ## 1. Project Goal
 
