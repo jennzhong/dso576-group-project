@@ -4,7 +4,7 @@
 **Project:** Emerging Artist Discovery Through Listening Behavior  
 **Individual branch:** `cleaning-shivanee`  
 **Branch URL:** https://github.com/jennzhong/dso576-group-project/tree/cleaning-shivanee  
-**Submitted cleaning commit ID:** `PASTE_CODE_RESULTS_COMMIT_ID_HERE`
+**Submitted cleaning commit ID:** `7f4a60bcecc30a2480348c1c451f0dd8487b7739`
 
 ## Project vision and question
 
