@@ -4,7 +4,7 @@
 
 - **GitHub branch:** `lewis-li`
 - **Branch URL:** [lewis-li](https://github.com/jennzhong/dso576-group-project/tree/lewis-li)
-- **Submitted commit ID:** [ADD AFTER FINAL CODE COMMIT]
+- **Submitted commit ID:** ff18eb4db656e1b2f9b8161b3e4f103e72b7bf78
 
 ## Data-Cleaning Workflow
 
