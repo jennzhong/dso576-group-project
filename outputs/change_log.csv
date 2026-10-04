@@ -1,0 +1,20 @@
+rule,action,rows_affected,note
+R8,removed exact duplicate rows,0,
+R2,listened_at text -> UTC datetime,1940,0 failed conversions
+R3,artist_mbids string -> JSON list,1181,0 parse failures
+R4,flagged rows with a malformed ID,0,
+R5,track_name: trim + NFC changed text,2,
+R5,artist_name: trim + NFC changed text,0,
+R5,release_name: trim + NFC changed text,0,
+R6,rows whose artist_key merges 2+ raw spellings,280,9 keys
+R6,' - Topic' suffix removed from artist_key,82,
+R6,alias table mapped artist_key,33,takanashi yasuharu / -yaiba-
+R6,placeholder artist name -> missing artist_key,2,
+R7,artist_id from MBID,1181,
+R7,artist_id from name key (no MBID),757,
+R9,flagged same recording < 60s after previous,58,"kept in table, is_countable=False"
+R11,flagged timestamp outside 2005 .. retrieval,0,
+R10,kept missing release_name (not filled),754,
+R10,kept missing artist_mbids (not filled),759,
+R10,kept missing recording_mbid (not filled),728,
+R10,kept missing release_mbid (not filled),759,
