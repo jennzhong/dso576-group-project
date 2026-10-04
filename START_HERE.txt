@@ -1,0 +1,28 @@
+SHIVANEE - START HERE
+
+You already created the correct branch: cleaning-shivanee.
+
+1) Upload the packet files to cleaning-shivanee.
+2) Replace the blank README.md with the README.md in this packet.
+3) Replace the incorrect pull_listenbrainz_sample.py on YOUR branch with the packet version.
+4) Open the existing .gitignore and add the lines from GITIGNORE_ADDITIONS.txt.
+5) Run:
+   python -m pip install -r requirements.txt
+   python pull_listenbrainz_sample.py
+   python clean_listenbrainz.py
+   python build_report.py
+
+6) Check the terminal output. The original project reference was 1,940 rows.
+   If the script prints recreation warnings, KEEP pull_validation.json; those warnings document
+   source changes rather than hiding them.
+
+7) First commit: commit the code + evidence + 50-row sample (NOT raw/full CSV).
+8) Copy that commit ID:
+   git rev-parse HEAD
+9) Run:
+   python finalize_submission.py YOUR_COMMIT_ID
+10) Make one small final metadata commit containing the updated README, submission_info.json,
+    and rebuilt PDF.
+11) Run:
+    python validate_submission.py
+12) Submit Shivanee_Kooner_Module6_Cleaning_Report.pdf on Gradescope.

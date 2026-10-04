@@ -1,0 +1,5 @@
+# Add these lines to the existing .gitignore on cleaning-shivanee:
+listenbrainz_sample.csv
+listenbrainz_cleaned.csv
+__pycache__/
+.ipynb_checkpoints/
