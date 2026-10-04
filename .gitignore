@@ -1,3 +1,10 @@
 *.csv
 __pycache__/
 .DS_Store
+.venv/
+.ipynb_checkpoints/
+
+# Tracked exceptions: the frozen raw source, expected checks, and cleaning outputs
+!listenbrainz_sample.csv
+!record_checks_expected.csv
+!outputs/*.csv
