@@ -74,9 +74,9 @@ outputs written to outputs/
 | `pyproject.toml`, `uv.lock`, `requirements.txt` | Dependencies |
 | `explore_sample.py`, `test_team_assumptions.py` | Earlier Phase 1 exploration (unchanged) |
 
-Note: `pull_listenbrainz_sample.py` on this branch contains exploration code,
-not the original API pull. The source details above and the frozen CSV
-document the pull.
+There is no pull script on this branch: the API serves live data, so a re-pull
+would not recreate the sample. The source details above and the frozen CSV
+(checked by SHA-256) document the pull.
 
 ## Key cleaning decisions (details in `cleaning_rules.md`)
 
