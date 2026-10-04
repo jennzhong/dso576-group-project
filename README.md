@@ -87,3 +87,12 @@ document the pull.
 - Artist identity: first artist MBID when present, otherwise `name:<artist_key>`. Multi-artist credits are expanded only in the bridge table.
 
 ## Submission metadata
+
+| | |
+|---|---|
+| Branch | `cleaning-andy` |
+| Branch URL | https://github.com/jennzhong/dso576-group-project/tree/cleaning-andy |
+| Submitted commit (code + outputs) | `1bb28dfa98123ad288b06ae51393a96f4800de14` — https://github.com/jennzhong/dso576-group-project/commit/1bb28dfa98123ad288b06ae51393a96f4800de14 |
+
+The commit after the submitted one changes only this README section.
+Outputs are byte-identical at both commits.
