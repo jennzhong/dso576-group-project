@@ -1,0 +1,66 @@
+{
+  "project": "Emerging Artist Discovery Through Listening Behavior",
+  "student": "Shivanee Kooner",
+  "business_question": "Can listening behavior - especially growth in unique listeners and repeat engagement - help a music-streaming editorial team identify promising emerging artists for additional exposure?",
+  "one_row": "One listen event: one user playing one track at one point in time.",
+  "expected_event_key": [
+    "username",
+    "listened_at",
+    "recording_msid"
+  ],
+  "source_file": "listenbrainz_sample.csv",
+  "starting_rows": 1940,
+  "final_rows": 1940,
+  "row_difference": 0,
+  "raw_exact_duplicate_rows_including_all_members": 0,
+  "raw_duplicate_copies": 0,
+  "normalized_duplicate_copies_removed": 0,
+  "repeated_event_key_rows_after_cleaning": 0,
+  "missing_before": {
+    "username": 0,
+    "listened_at": 0,
+    "track_name": 0,
+    "artist_name": 0,
+    "release_name": 754,
+    "recording_msid": 0,
+    "artist_mbids": 759,
+    "recording_mbid": 728,
+    "release_mbid": 759
+  },
+  "missing_after": {
+    "username": 0,
+    "listened_at": 0,
+    "track_name": 0,
+    "artist_name": 0,
+    "release_name": 754,
+    "recording_msid": 0,
+    "artist_mbids": 759,
+    "recording_mbid": 728,
+    "release_mbid": 759
+  },
+  "failed_date_conversions": 0,
+  "dates_at_or_after_historical_cutoff": 0,
+  "core_missing_after": {
+    "username": 0,
+    "track_name": 0,
+    "artist_name": 0,
+    "recording_msid": 0
+  },
+  "unique_listeners": 5,
+  "unique_artist_names": 756,
+  "resolved_artist_mbid_rows": 1181,
+  "audit_grouped_listens": 1940,
+  "all_record_checks_match": true,
+  "sample_selection": "The 50-row sample intentionally includes the five record-check rows, oldest and newest listens for users where available, rows with missing artist MBIDs, multi-artist-credit cases when present, and a deterministic random sample (random_state=576) to reach 50 rows.",
+  "limitations": [
+    "The sample contains only five self-selected ListenBrainz users, so listener counts are sample-specific.",
+    "User observation windows are uneven and do not share one common time period.",
+    "The historical extract is capped for several users, so it is not each user's complete listening history.",
+    "MusicBrainz identifiers are missing for some listens, and the missingness is uneven across users.",
+    "A listener's first play in this extract may not be their true first exposure to an artist.",
+    "The data has no listener demographics, skip signal, or source-of-discovery field, so segmentation is behavioral only.",
+    "ListenBrainz server-side MBID resolution and historical records can change after the original September 2026 project extract."
+  ],
+  "generated_at_utc": "2026-10-04T16:24:51.018816+00:00",
+  "extra_source_columns_ignored": []
+}
