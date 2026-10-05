@@ -4,7 +4,7 @@
 **Project:** Emerging Artist Discovery Through Listening Behavior  
 **Individual branch:** `cleaning-jennifer`  
 **Branch URL:** https://github.com/jennzhong/dso576-group-project/tree/cleaning-jennifer  
-**Submitted commit ID:** `TO_BE_ADDED_AFTER_FINAL_COMMIT`
+**Submitted commit ID:** `c0a3c351ac3a9a00ad1699056af2e744b3c37150`
 
 ## Data source and version
 
