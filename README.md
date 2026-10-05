@@ -2,8 +2,8 @@
 # dso576-group-project: data cleaning (Module 6)
 
 - Branch: cleaning-benazira
-- Branch URL: (add after push)
-- Commit ID: (add after push)
+- Branch URL: https://github.com/jennzhong/dso576-group-project/tree/cleaning-benazira
+- Commit ID: 2bf5327e93aa85f8dfa00b9ed03d3fe6da8a0307
 
 ## Data
 ListenBrainz API sample, pulled 5 Oct 2026: 5 users, 2,214 listens (listenbrainz_sample.csv, gitignored).
