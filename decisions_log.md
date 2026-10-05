@@ -1,0 +1,17 @@
+# Cleaning Decision Log
+
+Written before applying any rules. Source: ListenBrainz API sample, retrieved 5 OCT 2026 (listenbrainz_sample.csv, 2,214 rows, 9 columns, 5 users).
+
+| # | Rule | Reason | Check |
+|---|------|--------|-------|
+| 1 | Never modify listenbrainz_sample.csv. Write all output to data/clean/. | The assignment requires the original to stay unchanged, and it lets anyone re-run from scratch. | Current source hash matches `cleaning_log.json`; `clean.py` reads the source and writes derived outputs only. No pre-run hash was saved for an independent before/after comparison. |
+| 2 | Read all columns as text, then convert `listened_at` to a UTC datetime. Failed conversions become missing and are counted. | Timestamps drive every time-based metric (monthly growth, repeat listens). | 0 failed timestamp conversions (`bad_timestamps`). |
+| 3 | Keep ID columns (`recording_msid`, `recording_mbid`, `release_mbid`) as strings. | IDs are labels, not numbers, and must not be altered or reformatted. | All three ID columns match the source row-for-row, treating empty cells as missing values. |
+| 4 | Parse `artist_mbids` from text into a list and take the first MBID as `artist_mbid`. Count rows with more than one artist. | The MBID is a more reliable artist key than the free-text name. | 232 rows have multiple artist MBIDs; the first is used as `artist_mbid`. |
+| 5 | Trim whitespace and collapse repeated spaces in `artist_name`, `track_name` and `release_name`. Keep the raw column and add a `_clean` version. | Spacing differences create fake duplicate artists. | Changed counts: `artist_name` 0, `track_name` 7, `release_name` 0. |
+| 6 | Do not merge artist name variants (e.g. "Takanashi Yasuharu" vs "Yasuharu Takanashi") by name matching. Use MBID where it exists, cleaned name otherwise. | Name matching risks merging different artists. | No fuzzy matching is used. The fallback `artist_key` case-folds cleaned names, so case-only variants share a key; variant impact is not separately counted. |
+| 7 | Remove exact duplicate rows only. Keep repeated listens of the same track by the same user at different times. | Repeat listening is the engagement signal the project measures. | 0 exact duplicates removed; 0 repeated (user, recording, timestamp) rows. There are 687 listens beyond the first for a (user, `recording_msid`) pair. |
+| 8 | Do not fill in missing MBIDs. Add a `has_artist_mbid` flag and keep the rows. | 1,025 of 2,214 listens (46.3%) have no artist MBID; guessing would add errors. | 1,025 source rows lack `artist_mbids` and 1,025 cleaned rows have a missing `artist_mbid`; all 2,214 listens are retained. The derived name fallback does not fill `artist_mbid`. |
+| 9 | Report each metric twice: all rows, and MBID-only rows. | Missing MBIDs are concentrated in certain users, so MBID-only results skew toward them. | Coverage ranges from 44/500 (8.8%) for John V to 213/214 (99.5%) for music_af. Cleaning counts are 2,214 total and 1,189 with an MBID; paired analytical metrics must be produced downstream. |
+| 10 | Flag, but do not delete, suspicious timestamps (future dates, before 2005, many listens in the same second). | Unusual does not always mean wrong. | 0 future, 0 pre-2005, and 0 same-second rows flagged. |
+| 11 | Keep one row per listen in the cleaned table. | Keeps row counts reconcilable for the start-to-final row check. | 2,214 source rows - 0 exact duplicates = 2,214 cleaned rows; reconciliation assertion passes. |
