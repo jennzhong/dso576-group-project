@@ -8,3 +8,7 @@ __pycache__/
 !listenbrainz_sample.csv
 !record_checks_expected.csv
 !outputs/*.csv
+
+# Phase 2 (Member 4): canonical team input from Member 3 and KPI outputs
+!listenbrainz_final_cleaned.csv
+!outputs_kpi/*.csv

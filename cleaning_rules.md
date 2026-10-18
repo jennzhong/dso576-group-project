@@ -57,4 +57,6 @@ cleaning script exists. The script compares actual output to that file.
 
 ## Changes to rules
 
-_None yet._
+| Date | Rule | Change | Reason / effect |
+|---|---|---|---|
+| 2026-10-17 | R7b (Phase 2) | If an `artist_key` appears with exactly one artist MBID, its rows without an MBID take that MBID as `artist_id` (`artist_id_source = key_mbid`). Applied in `kpi_analysis.py` (`derive_columns`); the Module 6 `outputs/` files are unchanged. | R7 split one artist across an MBID id and a `name:` id when only some of its listens were matched — e.g. Arthrn (125 + 57 listens). 116 rows (113 countable) change; artists 679 → 669; pair return rate 25.0% → 25.0%. Keys with 2+ MBIDs (Junior Varsity, Kenny Rogers) are left alone. |

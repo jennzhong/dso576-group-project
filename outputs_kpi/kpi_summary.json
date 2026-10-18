@@ -1,0 +1,35 @@
+{
+  "kpis": {
+    "period_start": "2019-03-07",
+    "period_end": "2026-09-21",
+    "listeners": 5,
+    "artists": 669,
+    "total_listens": 1940,
+    "countable_listens": 1882,
+    "excluded_double_scrobbles": 58,
+    "excluded_missing_artist": 2,
+    "artist_listens": 1880,
+    "listener_artist_pairs": 677,
+    "pair_return_rate": 0.2496,
+    "pair_multi_track_rate": 0.2186,
+    "pct_artists_with_return": 0.2526,
+    "artists_with_2plus_listeners": 8,
+    "artists_with_momentum": 48,
+    "median_return_momentum": -0.1573
+  },
+  "artist_id_source_rows": {
+    "mbid": 1181,
+    "name": 641,
+    "key_mbid": 116,
+    "missing": 2
+  },
+  "checks": {
+    "pair_listens_equal_artist_listens": true,
+    "artist_listens_equal_artist_listens": true,
+    "listeners_sum_equals_pairs": true,
+    "countable_plus_excluded_equals_total": true,
+    "return_rate_in_0_1": true,
+    "momentum_in_minus1_1": true,
+    "ranks_unique_1_to_n": true
+  }
+}

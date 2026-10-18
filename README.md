@@ -1,3 +1,44 @@
+# DSO 576 Phase 2 — Member 4 Deliverables (Backend Analysis: KPIs)
+
+**Primary output:** `kpi_analysis.py`, reusable KPI functions for the dashboard. Its outputs:
+- `outputs_kpi/artist_kpis.csv`: 669 artists × 17 KPI columns
+- `outputs_kpi/listener_artist_kpis.csv`: 677 listener × artist rows
+- `outputs_kpi/kpi_summary.json`: KPI cards and reconciliation checks
+
+## Files
+- `kpi_analysis.py`: loader (adds `artist_id`, `is_countable` and other analysis columns to Member 3's table), period filter, KPI functions, shortlist filter, artist detail, CLI.
+- `listenbrainz_final_cleaned.csv`: Member 3's canonical input (1,940 rows; copied from branch `Cleaned-Dataset`).
+- `outputs_kpi/artist_kpis.csv`: one row per artist. This is the ranking table for use case 1.
+- `outputs_kpi/listener_artist_kpis.csv`: one row per listener × artist. Use cases 2 and 3 and Member 5 build on it.
+- `outputs_kpi/kpi_summary.json`: headline KPI cards plus the checks that must pass.
+- `kpi_analysis_log.md`: input decision, KPI definitions table, rules (including new R7b and return momentum), verified results, downstream use, limitations.
+- `tests/test_kpi_analysis.py`: 17 tests. They cover hand-computed examples, edge cases, and parity with Module 6.
+
+## Reproduce
+From the repository root:
+```bash
+uv sync                                    # or: pip install -r requirements.txt
+uv run python kpi_analysis.py --input listenbrainz_final_cleaned.csv --outdir outputs_kpi
+uv run python kpi_analysis.py --start 2019-07-15 --end 2019-08-31 --outdir /tmp/kpi_period   # one period
+uv run pytest                              # expected: 17 passed
+```
+The first command prints `kpi_summary.json` and ends with `artists: 669  listener x artist pairs: 677`.
+
+## Use from code (Member 5, Phase 3 app)
+```python
+import kpi_analysis as k
+listens = k.load_listens()                                   # cache this in the app
+period = k.filter_period(listens, "2024-11-16", "2024-12-16")
+artists, pairs, summary = k.compute_kpis(period)             # table, pair rows, KPI cards
+shortlist = k.apply_emerging_filter(artists, k.EmergingFilter(min_listens=5, min_avg_active_days=2))
+detail = k.artist_detail(period, artists.loc[0, "artist_id"])  # summary, listeners, tracks
+```
+
+## Note
+`kpi_analysis.py` adds one identity rule (R7b, see `cleaning_rules.md` → Changes to rules) and computes countability on load. If Member 3 adds those columns to the canonical file, only `derive_columns()` changes. The Module 6 outputs below are untouched: `check_reproducible.py` still reproduces all 7 exactly.
+
+---
+
 # dso576-group-project — Module 6 data cleaning (Andy Chen)
 
 **Branch:** `cleaning-andy` ·

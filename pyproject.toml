@@ -9,3 +9,12 @@ dependencies = [
     "nbconvert>=7,<8",
     "tabulate>=0.9,<1",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
