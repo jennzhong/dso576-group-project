@@ -1,0 +1,190 @@
+> **Superseded draft — do not build from this file.** Member 2's early dashboard design,
+> revised and merged into `BUILD_SPEC.md` Section 3, which is the source of truth.
+
+1. Dashboard Overview
+
+Our project focuses on music streaming analytics using ListenBrainz and MusicBrainz data. The dashboard will help music streaming editorial teams identify emerging artists who deserve additional exposure and understand which listener segments are most likely to remain engaged.
+
+The dashboard will allow users to explore artist popularity, audience growth, listening behavior, and engagement trends.
+
+2. Dashboard Layout
+
+The dashboard will have four main sections:
+
+Section 1: Overview Dashboard
+
+Display key performance indicators (KPIs).
+
+Show the top emerging artists based on audience growth and engagement.
+
+Provide a quick summary of listening activity.
+
+Section 2: Emerging Artist Rankings
+
+Display a ranking table of emerging artists.
+
+Include total listens, unique listeners, audience growth rate, and repeat listener rate.
+
+Allow users to sort artists by different performance metrics.
+
+Section 3: Artist Growth & Engagement
+
+Display line charts showing weekly listening trends.
+
+Compare artist audience growth over time.
+
+Show how consistently listeners engage with each artist.
+
+Section 4: Audience Segments
+
+Compare new and returning listeners.
+
+Identify listener groups with higher engagement.
+
+Help editorial teams understand which audiences are most likely to continue listening.
+
+3. Key Performance Indicators (KPIs)
+| KPI | Calculation | Purpose |
+|---|---|---|
+| Total Listens | Count of valid listening events | Measure overall listening activity |
+| Unique Listeners | Count of distinct listener IDs per artist | Measure audience reach |
+| Audience Growth Rate | (Current unique listeners - Previous unique listeners) / Previous unique listeners * 100 | Identify growing artists |
+| Repeat Listener Rate | Listeners with 2+ plays / Total unique listeners * 100 | Measure repeated engagement |
+| Average Listens per Listener | Total listens / Unique listeners | Measure listening frequency |
+| Returning Listener Rate | Listeners active in both periods / Listeners active in previous period * 100 | Measure audience retention |
+
+4. Charts and Visualizations
+| Visualization | Purpose | Required Data |
+|---|---|---|
+| KPI Cards | Summarize overall performance | Listen counts, listener IDs |
+| Artist Ranking Table | Identify promising emerging artists | Artist ID, listens, unique listeners, growth |
+| Line Chart | Show weekly listening trends | Artist ID, timestamps, listens |
+| Bar Chart | Compare artist audience growth | Artist ID, unique listeners by period |
+| Scatter Plot | Compare audience reach and engagement | Unique listeners, repeat listener rate |
+| Audience Segment Chart | Compare new and returning listeners | Listener ID, artist ID, timestamps |
+
+All charts should update when users change the filters.
+
+5. Filters and User Interactions
+
+The dashboard will include:
+
+Date Range: Last 7 days, last 30 days, last 90 days, or custom dates.
+
+Artist Selection: Select one or multiple artists.
+
+Listener Type: All listeners, new listeners, or returning listeners.
+
+Ranking Metric: Total listens, unique listeners, growth rate, or repeat listener rate.
+
+Top N Artists: Display the top 5, 10, or 20 artists.
+
+User interactions:
+
+Selecting a date range updates the KPIs and charts.
+
+Clicking an artist in the ranking table opens detailed artist analytics.
+
+Changing the ranking metric reorders the artist table.
+
+Selecting multiple artists allows performance comparisons.
+
+Hovering over charts displays detailed values.
+
+6. Metric Definitions and Data Requirements
+
+The dashboard will use the team's cleaned ListenBrainz dataset, enriched with MusicBrainz artist information where available.
+
+Required logical fields:
+
+listener_id: Unique identifier for each listener.
+
+artist_id: Unique identifier for each artist.
+
+artist_name: Artist display name.
+
+listened_at: Timestamp of the listening event.
+
+listen_count: Number of listening events, calculated from the data.
+
+The actual column names must match the final cleaned dataset.
+
+Calculation Rules:
+
+Count each valid listening event once.
+
+Use distinct listener IDs when calculating audience size.
+
+Calculate metrics after applying the selected date range.
+
+Calculate audience growth using consecutive, equal-length periods.
+
+A repeat listener is a listener with at least two listens to the selected artist during the selected period.
+
+A returning listener is active in both the previous and current comparison periods.
+
+Missing artist identifiers and invalid timestamps must follow the team's agreed cleaning rules.
+
+Use the same definitions across the dashboard and backend functions.
+
+7. Dashboard Use Cases
+
+Use Case 1: Identify Emerging Artists
+
+User selects a date range and growth ranking → Dashboard shows artists ranked by audience growth and engagement → Editorial team decides which artists deserve additional promotion.
+
+Use Case 2: Evaluate Artist Engagement
+
+User selects an artist → Dashboard shows total listens, unique listeners, repeat listener rate, and weekly trends → Editorial team decides whether the artist is attracting consistent listener interest.
+
+Use Case 3: Understand Listener Segments
+
+User selects an artist and listener segment → Dashboard shows new and returning listener activity → Editorial team decides which audience groups are most likely to remain engaged.
+
+Use Case 4: Compare Artists
+
+User selects multiple artists → Dashboard shows side-by-side performance metrics and listening trends → Editorial team decides which artists should receive greater editorial exposure.
+
+8. Backend Requirements
+
+Members 4 and 5 will create reusable Python functions that provide:
+
+Artist-level KPI summaries.
+
+Weekly listening trends.
+
+Artist growth calculations.
+
+Repeat and returning listener metrics.
+
+Artist ranking datasets.
+
+Audience segment summaries.
+
+These functions should return values or pandas DataFrames that the dashboard can directly use.
+
+9. Dashboard Acceptance Checks
+
+The dashboard will be considered ready for implementation when:
+
+All KPIs match the backend calculations.
+
+Changing the date range updates all relevant charts and metrics.
+
+Artist rankings sort correctly by the selected metric.
+
+Selecting an artist displays the correct artist-specific information.
+
+Multiple artists can be compared.
+
+Empty results display a clear message rather than an error.
+
+Zero denominators are handled without division errors.
+
+All visualizations use consistent metric definitions.
+
+10. Expected Outcome
+
+The completed dashboard will help music streaming editorial teams make data-driven decisions about artist promotion and audience engagement.
+
+By combining artist rankings, growth trends, and listener engagement metrics, the dashboard will make it easier to identify emerging talent and understand which artists have the strongest potential for sustained listener interest.
