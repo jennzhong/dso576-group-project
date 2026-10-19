@@ -9,7 +9,7 @@
 |---|---|---|---|
 | UC1 | Date range, listeners, and shortlist filters (min listens, min avg active days, max listeners, MBID status, artists to exclude) | KPI cards and the ranked artist table | Which artists go on the shortlist |
 | UC2 | One artist from the table | That artist's KPIs, a per-listener timeline of plays, its listener rows and its tracks | Whether the engagement is sustained or a one-off |
-| UC3 | The Listeners tab (optionally one listener) | Per-listener summary and weekly new-vs-repeat-artist listening | Which listeners' habits are reliable early signals, and how much to trust each one's data |
+| UC3 | The Listeners tab (optionally one listener) | Per-listener summary and each listener's daily activity | Which listeners' habits are reliable early signals, and how much to trust each one's data |
 
 ## 2. Data
 - **Canonical file:** `listenbrainz_final_cleaned.csv` (repo root), produced by `final_cleaning.py` from `listenbrainz_sample.csv`. 1,940 rows, 11 columns, 5 users.
@@ -29,13 +29,14 @@
   - **Countable artist listen:** `is_countable` and the artist name is not a placeholder (1,880 rows).
   - **Continued engagement:** a listener plays the artist on 2 or more distinct UTC days (`returned` in `pair_kpis`).
   - **Emerging artist:** an artist that passes the curator's `EmergingFilter` (Section 3). The data has no popularity metadata, so "emerging" is the curator's filter plus exclude list, applied to repeat-engagement evidence.
+- **Ignore** any untracked `data/` folder (an old 2,214-row extract); the app uses only the root CSV.
 - **Decision records:** `cleaning_integration_log.md` (cleaning), `kpi_analysis_log.md` (KPI rules), `validation_summary.json`, `user_observation_summary.csv`.
 
 **Data limits. Every view must respect these.**
 
 | Finding | Rule for views |
 |---|---|
-| 5 users with non-overlapping windows (2019 ×2, 2024, 2025–26, 2026) | Never plot one combined calendar timeline. Time axes are per listener (days since that listener's first observed listen). Results are listener-level evidence, not market trends. |
+| 5 users with non-overlapping windows (2019 ×2, 2024, 2025–26, 2026) | Never put several listeners on one shared calendar axis. Listener charts are one small chart per listener, each on its own dates. The single-artist monthly chart (Tab 2) may use calendar months because 661 of 669 artists have one listener; its caption names the listener(s). Results are listener-level evidence, not market trends. |
 | 3 users hit the 500-listen extract cap (H-music, iliekcomputers, s_john_s) | Show a "capped" badge wherever these listeners appear. Their histories are cut off, so never read their last listen as the end of engagement. |
 | 661 of 669 artists have one listener | Never rank by listener count. Ranking uses depth of engagement (`rank_artists`). |
 | `return_momentum` exists for only 48 artists | Show "n/a" when missing; never treat it as 0. |
@@ -56,9 +57,9 @@
 | Min avg active days | 1.0 | `EmergingFilter.min_avg_active_days` |
 | Max listeners | none | `EmergingFilter.max_listeners` |
 | MBID status | any | `EmergingFilter.mbid_status` (`any` / `mbid` / `no_mbid`) |
-| Exclude artists (multi-select by `display_name`) | none | `EmergingFilter.exclude_artist_ids` |
+| Exclude artists (multi-select; options are `artist_id`s shown as `display_name`, with the first 8 characters of `artist_id` appended when two artists share a name) | none | `EmergingFilter.exclude_artist_ids` |
 
-`filter_period` always runs first. All metrics are computed on the filtered listens; the `EmergingFilter` is applied to the artist table afterwards.
+**Filter scope.** Date range and Listeners apply to every tab: `filter_period` runs first and every function receives its output. The five shortlist controls (`EmergingFilter`) apply only to the Shortlist table and the Tab 2 artist picker; they do not change the KPI cards or Tab 3. Under the table, show "N of M artists match the shortlist filters".
 
 **Tab 1 — Shortlist (UC1, starting view)**
 
@@ -67,7 +68,7 @@
 | KPI cards: listeners, artists, countable listens, listener–artist pairs, pair return rate, % artists with a return, artists with momentum | How big is the selection and how engaged is it? | filtered listens | as named | `headline_kpis(listens, pairs, artists)` |
 | Ranked artist table: rank, display_name, countable_listens, unique_listeners, return_rate, avg_active_days, distinct_tracks, median_days_to_return, return_momentum | Which artists show the strongest repeat engagement? | `artist_kpis(listens)` | Sorted by `rank`; rows filtered by `apply_emerging_filter(artists, EmergingFilter(...))` | `artist_kpis`, `apply_emerging_filter` |
 
-Clicking a row selects that artist and opens Tab 2.
+Selecting a table row (`st.dataframe(..., on_select="rerun", selection_mode="single-row")`) stores its `artist_id` in `st.session_state`; the curator then opens Tab 2, which shows that artist. Streamlit cannot switch tabs programmatically, so no automatic navigation. If the shortlist is empty, show "No artists match these filters" instead of the table.
 
 **Tab 2 — Artist detail (UC2)**
 
@@ -80,7 +81,9 @@ Clicking a row selects that artist and opens Tab 2.
 | Listener table: username, countable_listens, active_days, days_to_return, return_momentum | Who is driving it? | M4 `artist_detail(...).listeners` |
 | Track table | Is it one song or several? | M4 `artist_detail(...).tracks` |
 
-`events = build_artist_listen_events(listens)` is computed once per filter state and passed to both M5 artist functions.
+`events = build_artist_listen_events(listens)` is computed once per filter state and passed to both M5 artist functions. M5 uses only each row's own MBIDs, so its artist figures cover MBID-matched listens only (M4's inferred `key_mbid` rows are not included); caption them "MBID-matched listens".
+
+**Invalid selection:** if a filter change removes the selected artist, Tab 2 falls back to the top-ranked artist in the current shortlist; if the shortlist is empty, Tab 2 shows "No artist selected".
 
 **Tab 3 — Listeners (UC3)**
 
@@ -91,6 +94,8 @@ Clicking a row selects that artist and opens Tab 2.
 | Observation coverage: bar chart of `active_listeners` by `month`, titled "Sampled listeners active per month" (not "growth") | When does each part of the sample come from? | M5 `build_audience_growth(listens)` |
 
 **Formatting:** rates as percentages with 1 decimal; momentum with 2 decimals and "n/a" when missing; dates as YYYY-MM-DD; table hover shows `artist_id`. When the filtered listens are empty, every tab shows "No listens in this period" instead of calling the functions.
+
+**Out of scope for the MVP:** branding, mobile layout, authentication, saved filter settings and deployment configuration. Build for a desktop browser with Streamlit's default theme.
 
 ## 4. Architecture
 
@@ -136,7 +141,7 @@ Changing a metric touches only its function and test; changing the layout touche
 
 | Choice | Why |
 |---|---|
-| Python 3.12 via `uv` (`uv sync --python 3.12`, then `uv run ...`) | `kpi_analysis.py` needs 3.10+; the macOS system `python3` (3.9) fails, and pandas 2.2.3 does not build on 3.14 |
+| Python 3.12 via `uv` (`uv sync --python 3.12`, then `uv run ...`); `pyproject.toml` + `uv.lock` are the dependency source of truth | `kpi_analysis.py` needs 3.10+; the macOS system `python3` (3.9) fails, and pandas 2.2.3 does not build on 3.14 |
 | CSV in the repo, no database | Small, static data versioned with the code |
 | Streamlit + Plotly | Fast to build interactive tabs, filters and hover; runs locally with `streamlit run app.py` and deploys to Streamlit Community Cloud |
 | `@st.cache_data` on `load_listens()` and on the filtered KPI results, keyed by the filter values | Data loads once; filter changes stay responsive |
@@ -171,6 +176,6 @@ Changing a metric touches only its function and test; changing the layout touche
 - [ ] A1 `streamlit run app.py` opens on the Shortlist tab in under 3 seconds locally, with no errors.
 - [ ] A2 With default filters the KPI cards show 5 listeners, 669 artists and 677 pairs.
 - [ ] A3 Changing any filter updates the cards and the table; setting min avg active days = 2 leaves 168 artists.
-- [ ] A4 Clicking the rank-1 artist opens Tab 2 with its KPI row equal to `artist_kpis(...)` rank 1.
+- [ ] A4 Selecting the rank-1 row, then opening Tab 2, shows that artist with its KPI row equal to `artist_kpis(...)` rank 1.
 - [ ] A5 Tab 3 lists 5 listeners with exactly 3 capped badges; Tab 2 for Arthrn shows its M5 30-day return row.
-- [ ] A6 No chart shares one calendar axis across listeners; momentum shows "n/a" where missing.
+- [ ] A6 No chart puts several listeners on one calendar axis; momentum shows "n/a" where missing; M5 artist figures are captioned "MBID-matched listens".
