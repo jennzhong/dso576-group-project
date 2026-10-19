@@ -1,5 +1,4 @@
 # BUILD_SPEC — Emerging Artist Discovery Dashboard
-
 ## 1. Vision & Use Cases
 - **User:** a music editorial curator (streaming-playlist editor or label A&R) looking for lesser-known artists to feature.
 - **Decision:** which artists to shortlist, based on whether listeners came back to them, not on how many plays they have.
@@ -36,7 +35,7 @@
 
 | Finding | Rule for views |
 |---|---|
-| 5 users with non-overlapping windows (2019 ×2, 2024, 2025–26, 2026) | Never put several listeners on one shared calendar axis. Listener charts are one small chart per listener, each on its own dates. The single-artist monthly chart (Tab 2) may use calendar months because 661 of 669 artists have one listener; its caption names the listener(s). Results are listener-level evidence, not market trends. |
+| 5 users with non-overlapping windows (2019 ×2, 2024, 2025–26, 2026) | Never put several listeners on one shared calendar axis. Listener charts are one small chart per listener, each on its own dates. The single-artist monthly chart (Tab 2) may use calendar months because 661 of 669 artists have one listener; its caption lists the usernames from `artist_detail(...).listeners` for the current filters. Results are listener-level evidence, not market trends. |
 | 3 users hit the 500-listen extract cap (H-music, iliekcomputers, s_john_s) | Show a "capped" badge wherever these listeners appear. Their histories are cut off, so never read their last listen as the end of engagement. |
 | 661 of 669 artists have one listener | Never rank by listener count. Ranking uses depth of engagement (`rank_artists`). |
 | `return_momentum` exists for only 48 artists | Show "n/a" when missing; never treat it as 0. |
@@ -75,7 +74,7 @@ Selecting a table row (`st.dataframe(..., on_select="rerun", selection_mode="sin
 | Element | Question it answers | Function |
 |---|---|---|
 | Artist picker (defaults to the selected or top-ranked artist) | — | options from the filtered artist table |
-| KPI row for the artist | How engaged are its listeners? | M4 `artist_detail(listens, artist_id).summary` |
+| KPI row for the artist: countable_listens, unique_listeners, return_rate, avg_active_days, distinct_tracks, return_momentum | How engaged are its listeners? | M4 `artist_detail(listens, artist_id).summary` |
 | 30-day return and depth: `return_rate_pct`, `share_3plus_days_pct`, `share_3plus_tracks_pct` | Do listeners come back soon and go deep? | M5 `build_artist_engagement(events)` row where `artist_mbid == artist_id`; show "n/a — no MBID" when `artist_id` starts with `name:` |
 | Bar chart: x = `month`, y = `total_listens`, hover `unique_listeners` | Is listening sustained across months or a one-off? | M5 `build_artist_monthly_growth(events)` rows for the same `artist_mbid` (same "n/a" rule) |
 | Listener table: username, countable_listens, active_days, days_to_return, return_momentum | Who is driving it? | M4 `artist_detail(...).listeners` |
@@ -157,7 +156,7 @@ Changing a metric touches only its function and test; changing the layout touche
 | 2 | `app.py` shell: page title, sidebar filters, cached `load_listens()` | A1 passes |
 | 3 | Tab 1: KPI cards + ranked table with `EmergingFilter` | A2, A3 pass |
 | 4 | Tab 2: artist picker, KPI row, timeline, listener and track tables; row click → Tab 2 | A4 passes |
-| 5 | Tab 3: listener table + weekly charts | A5 passes |
+| 5 | Tab 3: listener table, per-listener daily charts, monthly coverage chart | A5 passes |
 | 6 | Data-limit labels (capped badge, "n/a", "first observed listen") and formatting | A6 passes |
 
 ## 7. Acceptance Checks

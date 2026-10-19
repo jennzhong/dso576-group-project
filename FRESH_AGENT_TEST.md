@@ -24,6 +24,10 @@ The agent also assumed (correctly) that the untracked `data/` folder holds an ol
 
 | # | Agent's question or guess | Fix made |
 |---|---|---|
-| | | |
+| 1 | Build Order step 5 still said "weekly charts" while Tab 3 specifies daily charts | Step 5 now matches Tab 3: per-listener daily charts and the monthly coverage chart |
+| 2 | Which fields go in the Artist detail KPI row? | Fields listed: countable_listens, unique_listeners, return_rate, avg_active_days, distinct_tracks, return_momentum |
+| 3 | Does the monthly-chart caption list every listener or just a count? | Caption lists the usernames from `artist_detail(...).listeners` for the current filters |
 
-**Result:** (fill in after Run 2)
+The agent raised no data, metric or architecture questions, and its default assumptions matched the fixes above.
+
+**Result:** after Run 1 fixes, Run 2 found only three wording gaps, all fixed. 
