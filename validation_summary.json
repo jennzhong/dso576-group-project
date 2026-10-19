@@ -1,0 +1,15 @@
+{
+  "source_rows": 1940,
+  "cleaned_rows": 1940,
+  "exact_duplicates_removed": 0,
+  "unique_listeners": 5,
+  "distinct_artist_name_strings": 756,
+  "unparseable_timestamps": 0,
+  "artist_mbid_status": {
+    "valid": 1181,
+    "missing": 759
+  },
+  "repeated_candidate_event_key_rows": 0,
+  "raw_columns_preserved": true,
+  "source_is_complete_uploaded_extract": true
+}
