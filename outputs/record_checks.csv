@@ -1,0 +1,18 @@
+check_id,username,listened_at,field,original_value,expected_value,reason,actual_value,match
+1,iliekcomputers,2024-12-16 05:44:12,recording_msid,000c52a6-b412-4a92-a948-ce6fc35bd2e6,000c52a6-b412-4a92-a948-ce6fc35bd2e6,R1/R4: IDs are read as text so the leading zeros survive; ID is a valid UUID,000c52a6-b412-4a92-a948-ce6fc35bd2e6,True
+1,iliekcomputers,2024-12-16 05:44:12,listened_at_utc,2024-12-16 05:44:12,2024-12-16 05:44:12+00:00,R2: same wall-clock value labelled UTC (API check showed CSV times are UTC),2024-12-16 05:44:12+00:00,True
+2,iliekcomputers,2024-12-16 08:04:37,n_credited_artists,"['9fff2f8a-21e6-47de-a2b8-7f449929d43f', '73e5e69d-3554-40d8-8516-00cb38737a1c']",2,R3: two MBIDs in the list = two credited artists (Drake and Rihanna),2,True
+2,iliekcomputers,2024-12-16 08:04:37,bridge_rows,"['9fff2f8a-21e6-47de-a2b8-7f449929d43f', '73e5e69d-3554-40d8-8516-00cb38737a1c']",2,R7: one listen becomes two bridge rows while the listen table keeps one row,2,True
+2,iliekcomputers,2024-12-16 08:04:37,artist_id,"Drake, Rihanna",9fff2f8a-21e6-47de-a2b8-7f449929d43f,R7: first credited MBID is the primary artist_id,9fff2f8a-21e6-47de-a2b8-7f449929d43f,True
+3,H-music,2019-07-15 17:39:39,suspected_double_scrobble,Road ii Eternity (previous same-recording submission 17:39:08),True,R9: same user + same recording_msid only 31 s after the previous submission (< 60 s),True,True
+3,H-music,2019-07-15 17:39:39,is_countable,Road ii Eternity,False,R9: flagged rows are kept but not counted,False,True
+3,H-music,2019-07-15 17:39:08,suspected_double_scrobble,Road ii Eternity (previous same-recording submission 17:37:40),False,R9 boundary: 88 s since previous submission (>= 60 s) so this one is a real repeat,False,True
+4,H-music,2019-11-05 23:02:06,artist_name_clean,arthrn,arthrn,R5: display text keeps the user's lowercase spelling,arthrn,True
+4,H-music,2019-11-05 23:02:06,artist_key,arthrn,arthrn,R6: same key as the 176 'Arthrn' listens so the artist is not split,arthrn,True
+4,H-music,2019-11-05 23:02:06,suspected_double_scrobble,ghz (previous listen was a different track 28 s earlier),False,R12: short gap to a different track is not a double-scrobble,False,True
+5,s_john_s,2019-03-10 12:51:10,artist_key,Unknown,<NA>,R6: placeholder artist becomes a missing group key,<NA>,True
+5,s_john_s,2019-03-10 12:51:10,is_countable,Unknown,True,R6/R10: the listen still happened so it stays in listen totals; only artist metrics exclude it,True,True
+6,John V,2026-09-18 15:59:44,artist_key,Alan Silvestri - Topic,alan silvestri,R6: YouTube auto-channel suffix removed from the grouping key,alan silvestri,True
+6,John V,2026-09-18 15:59:44,artist_name_clean,Alan Silvestri - Topic,Alan Silvestri - Topic,R5: display text unchanged,Alan Silvestri - Topic,True
+6,John V,2026-09-18 15:59:44,artist_id,<NA> (no artist_mbids),name:alan silvestri,R7/R10: no MBID so identity falls back to the name key; MBID stays missing,name:alan silvestri,True
+7,s_john_s,2019-03-16 09:49:36,artist_key,Takanashi Yasuharu / -yaiba-,yasuharu takanashi / -yaiba-,R6 alias table: reversed name order mapped to one key,yasuharu takanashi / -yaiba-,True

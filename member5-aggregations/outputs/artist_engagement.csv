@@ -1,0 +1,607 @@
+artist_mbid,artist_credit,unique_listeners,returned_listeners,listeners_3plus_days,listeners_3plus_tracks,median_listening_days,median_tracks_played,return_rate_pct,share_3plus_days_pct,share_3plus_tracks_pct
+25b7b584-d952-4662-a8b9-dd8cdfbfeb64,A$AP Rocky,2,2,0,0,1.5,2.0,100.0,0.0,0.0
+381086ea-f511-4aba-bdf9-71c753dc5077,"Drake, Kendrick Lamar",2,2,0,0,1.5,2.0,100.0,0.0,0.0
+561d854a-6a28-4aa7-8c99-323e6ce46c2a,Miles Davis,2,2,0,1,1.0,2.0,100.0,0.0,50.0
+0383dadf-2a4e-4d10-a46a-e9e041da8eb3,Queen,2,1,0,0,1.5,1.5,50.0,0.0,0.0
+272989c8-5535-492d-a25c-9f58803e027f,Kendrick Lamar,2,1,1,0,2.5,1.5,50.0,50.0,0.0
+c8b03190-306c-4120-bb0b-6f2ebfc06ea9,"Drake, The Weeknd",2,1,0,0,1.5,1.5,50.0,0.0,0.0
+1ee18fb3-18a6-4c7f-8ba0-bc41cdd0462e,Drake,2,0,0,0,1.0,1.0,0.0,0.0,0.0
+300c4c73-33ac-4255-9d57-4e32627f5e13,Ringo Starr,2,0,0,0,1.0,1.0,0.0,0.0,0.0
+38474d18-9204-4f60-a137-1fcc6750b869,A$AP Rocky,2,0,0,0,1.0,1.0,0.0,0.0,0.0
+7bd66c18-cb33-49aa-9279-140acedbdb49,"KIDS SEE GHOSTS, Ty Dolla $ign",2,0,0,0,1.0,1.0,0.0,0.0,0.0
+99790314-885a-4975-8614-9c5bc890364d,Creep,2,0,0,0,1.0,1.0,0.0,0.0,0.0
+e4a51f17-a57b-47b1-b37b-f552d0f8e9e6,Travis Scott,2,0,0,0,1.0,1.0,0.0,0.0,0.0
+0090ccac-cad8-482d-8260-c1aa8b908c48,"Vishal Mishra, Raj Shekhar",1,1,1,0,3.0,2.0,100.0,100.0,0.0
+01809552-4f87-45b0-afff-2c6f0730a3be,Elvis Presley,1,1,1,1,4.0,3.0,100.0,100.0,100.0
+05517043-ff78-4988-9c22-88c68588ebb9,Paul Simon,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+06479724-ee7d-471e-a3d4-4554330a0293,Noga Erez,1,1,1,1,3.0,6.0,100.0,100.0,100.0
+06de7d6b-72fc-43a6-88b4-dc4c495e5607,"Vishal-Shekhar, Lucky Ali, Shreya Ghoshal, Anvita Dutt Guptan",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+07b6020a-c539-4d68-aeef-f159f3befc76,Band Of Horses,1,1,0,1,1.0,5.0,100.0,0.0,100.0
+083f547b-6d33-495f-89f0-4f657a7b1265,Pyrame,1,1,0,1,1.0,4.0,100.0,0.0,100.0
+09ae1987-363e-4636-8b16-cf11881b2e6b,"Kanishk Seth, Kavita Seth",1,1,1,0,3.0,2.0,100.0,100.0,0.0
+0a92c550-20c7-43bc-98ed-777e13c54dff,Jennifer Rush,1,1,0,1,2.0,3.0,100.0,0.0,100.0
+0c502791-4ee9-4c5f-9696-0602b721ff3b,Electric Light Orchestra,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+0dc9c4bc-8bcc-42f1-9033-bec41160377f,"Yo Yo Honey Singh, Neha Kakkar",1,1,1,1,4.0,3.0,100.0,100.0,100.0
+1036b808-f58c-4a3e-b461-a2c4492ecf1b,"Kanye West, JAY-Z, Rick Ross, Nicki Minaj, Bon Iver",1,1,0,0,2.0,2.0,100.0,0.0,0.0
+109958eb-a335-4c5e-907e-597ff4c6af46,Creedence Clearwater Revival,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+10ccb5d8-f9d5-4954-9441-3419b522a214,Olivia Newton-John,1,1,1,1,3.0,4.0,100.0,100.0,100.0
+12829680-473d-4787-8c53-a9e35b94ed18,"Harrdy Sandhu, Tanishk Bagchi, Nikhita Gandhi, Jaani",1,1,1,1,4.0,3.0,100.0,100.0,100.0
+13487087-6297-467e-a96a-56ae35c5002e,Akeboshi,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+13bcb2bb-db37-4397-baf5-e0f085be2d64,"Kanye West, JAY-Z, Rick Ross, Nicki Minaj, Bon Iver",1,1,0,0,2.0,2.0,100.0,0.0,0.0
+13df2a46-f72f-40e7-aa63-26fcf62c7048,Ministry,1,1,0,1,2.0,3.0,100.0,0.0,100.0
+14ecd19f-7121-4192-8549-e5056241a42f,"Kanye West, Pusha T",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+164f0d73-1234-4e2c-8743-d77bf2191051,Kanye West,1,1,1,1,5.0,36.0,100.0,100.0,100.0
+172e980e-ba97-4adb-acb0-d59733c599b6,KK,1,1,1,1,3.0,6.0,100.0,100.0,100.0
+17b53d9f-5c63-4a09-a593-dde4608e0db9,Kinks,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+181d1e31-0389-403a-898d-30c3a4105b7e,"Run The Jewels, El-P, Killer Mike, BOOTS",1,1,0,0,2.0,2.0,100.0,0.0,0.0
+1882fe91-cdd9-49c9-9956-8e06a3810bd4,Sabrina Carpenter,1,1,1,1,5.0,5.0,100.0,100.0,100.0
+18fd16ff-1807-4951-bfcf-700018019edb,Feine Sahne Fischfilet,1,1,0,1,2.0,6.0,100.0,0.0,100.0
+197889a0-15b6-40bc-89b1-8859137bf823,Suzi Quatro & Chris Norman,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+1c2938ae-37df-44a7-8630-be2cb1d357e0,Willy DeVille,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+1d70afd6-493c-4840-90db-5fdd114898de,Quarterflash,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+1dd28f27-4ab3-4a3f-8174-4ccd571a9dce,"A.R. Rahman, Mohit Chauhan",1,1,0,0,1.0,2.0,100.0,0.0,0.0
+20244d07-534f-4eff-b4d4-930878889970,Taylor Swift,1,1,1,1,8.0,5.0,100.0,100.0,100.0
+236459d6-f9ea-4f89-9239-21c0bedaaf25,Dion & the Belmonts,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+25d54fa4-0afa-4e47-a1ce-e2cfe5948fda,Arthrn,1,1,1,1,17.0,22.0,100.0,100.0,100.0
+260b6184-8828-48eb-945c-bc4cb6fc34ca,Charli xcx,1,1,1,1,4.0,5.0,100.0,100.0,100.0
+26300c93-0a9b-42d4-92fd-eec2e98e8bc3,Junior Varsity,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+28365249-f3fd-44db-8131-32cb170970c4,"Asha Bhosle, Mohammed Rafi",1,1,0,0,1.0,2.0,100.0,0.0,0.0
+2c07a0d6-b71f-4530-8059-065137ee2a10,Seekers,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+2c16cb3f-e85f-4158-889f-ffc038f5792d,Suzi Quatro,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+2c26fddb-3926-4004-ae27-22a3896a4f26,"Atif Aslam, Jyotica Tangri",1,1,1,1,4.0,4.0,100.0,100.0,100.0
+2df4ce6a-87d6-49e5-b140-4e71066f996c,"Vishal-Shekhar, Vishal Dadlani, Shekhar Ravjiani, Shilpa Rao, Mellow D, Kumaar",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+2f1b9381-5269-4f80-817d-99663cad5c43,Sawyer Hill,1,1,0,1,1.0,5.0,100.0,0.0,100.0
+321eaf5a-be21-4faf-a7a0-0a4e59e5ee29,Softcult,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+323315f1-a508-4ff8-901b-83edef85a163,Pop Tops,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+36b7da58-858c-44e2-b3bd-d2e88bf02f7c,H-Blockx,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+38045fba-02d0-47e0-bedd-98a449b7bab3,Rec Hall,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+3cd18a93-1797-4bbb-9b8a-c096d5e7864c,Amy Grant,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+3d2b98e5-556f-4451-a3ff-c50ea18d57cb,Aerosmith,1,1,0,1,1.0,4.0,100.0,0.0,100.0
+3d9a0555-c193-480c-a900-f63fbbdb7116,"A.R. Rahman, Anuradha, Chandralekha Annupamaa",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+3e52c980-f77d-408c-a704-936430a6c8e6,Saphir,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+3e7ef7ed-18c1-436d-b946-7e7e63ace408,Rupert Holmes,1,1,1,0,3.0,2.0,100.0,100.0,0.0
+3e99d6d6-04b3-4e07-93de-bfa41cfbaa38,Kochkraft durch KMA,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+401c3991-b76b-499d-8082-9f2df958ef78,Phil Collins,1,1,1,1,3.0,3.0,100.0,100.0,100.0
+40b8a690-94e4-4c82-ad0f-73f4b841e46a,Agnostic Front,1,1,0,1,2.0,4.0,100.0,0.0,100.0
+42a19448-ff60-4fd2-9d10-959bf2000729,B. J. Thomas,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+437a0e49-c6ae-42f6-a6c1-84f25ed366bc,"Kanye West, JAY-Z, Rick Ross, Nicki Minaj, Bon Iver",1,1,1,1,3.0,3.0,100.0,100.0,100.0
+443cc907-c40e-467d-9dcc-dfcc69222101,"Yo Yo Honey Singh, Jasmine Sandlas",1,1,1,0,3.0,2.0,100.0,100.0,0.0
+4458d70d-c215-4f06-beea-ebd448dad6ac,Bill Haley & his Comets,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+4586db61-284f-42dd-9b19-69111ea08149,"Pritam, Shaan, Sultan Khan",1,1,1,1,3.0,3.0,100.0,100.0,100.0
+45dc5f07-6609-4760-a933-8c9e0f858d05,GASHI,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+4697c274-90cd-4367-8d82-e3f205072c93,"Ved Sharma, Kunaal Vermaa",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+479497d4-e7c2-4e78-972e-56e78fac3995,Chris Isaak,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+4a779683-5404-4b90-a0d7-242495158265,Karan Aujla,1,1,1,0,5.0,2.0,100.0,100.0,0.0
+4b356f05-bcc2-4544-925b-fd9a1bf708be,"Danger Mouse, Black Thought, A$AP Rocky, Run The Jewels",1,1,0,0,1.0,1.0,100.0,0.0,0.0
+4bfa92dd-5e94-49f2-a66f-048fd66b726e,"Vishal-Shekhar, Vishal Dadlani, Shekhar Ravjiani, Shilpa Rao, Mellow D, Kumaar",1,1,1,0,3.0,2.0,100.0,100.0,0.0
+4e954b02-fae2-4bd7-9547-e055a6ac0527,"Kanye West, Kid Cudi, Raekwon",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+4f416ed7-dda2-45de-a6f1-b986e861cf4b,Deerhunter,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+50240e93-01bc-47a2-97f4-95500b7950a7,Arthrn,1,1,1,0,7.0,2.0,100.0,100.0,0.0
+52db98c1-0cc9-4aab-9f2d-ea8d359234f3,"Raghav Chaitanya, Manoj Muntashir, Pritam",1,1,0,0,1.0,1.0,100.0,0.0,0.0
+53a8e226-7a1b-441b-ba27-7eeac725698d,ZAH1DE,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+5403bf6e-bc1d-4e62-b31f-926a2bf66a14,Boney M.,1,1,0,1,2.0,3.0,100.0,0.0,100.0
+563201cb-721c-4cfb-acca-c1ba69e3d1fb,Gerry Rafferty,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+56743d2c-b315-4d01-a444-fa42088182c0,"AP Dhillon, Gurinder Gill, Intense",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+577d92bd-32ac-48b6-86df-4db6b0b52fbf,Neil Sedaka,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+57bfc4dd-7459-4396-b2ce-e45f02ef2b62,Olsen Brothers,1,1,0,0,1.0,1.0,100.0,0.0,0.0
+57c6f649-6cde-48a7-8114-2a200247601a,Tom Jones,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+585fee48-98c7-45b4-a47c-78d629b773b8,"Kanye West, Mr Hudson",1,1,0,0,1.0,1.0,100.0,0.0,0.0
+58a53082-a629-4ff1-a44d-7492d6f6e8fb,The Lemonheads,1,1,0,1,2.0,3.0,100.0,0.0,100.0
+5b7c803c-3adf-4544-9a2a-6b0edb9f1801,"Vishal Mishra, Raj Shekhar",1,1,0,0,2.0,2.0,100.0,0.0,0.0
+5d02f264-e225-41ff-83f7-d9b1f0b1874a,Simon & Garfunkel,1,1,1,1,4.0,4.0,100.0,100.0,100.0
+5d77d4cf-febf-4e5c-b8e7-16ea5ffb0439,"Aditya Rikhari, Tulsi Kumar, Lijo George-Dj Chetas",1,1,0,0,1.0,1.0,100.0,0.0,0.0
+5f39d33c-a167-4a63-9c44-71d27618b712,"Danger Mouse, Black Thought, A$AP Rocky, Run The Jewels",1,1,0,0,1.0,1.0,100.0,0.0,0.0
+5f9fece1-7aca-4919-96b3-422b375f4cd7,Marti Webb,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+6103ee37-0d0d-4e76-bacc-d0939cd14ad3,"Anurag Saikia, Raghav Chaitanya, Raj Shekhar, Nikhita Gandhi",1,1,0,0,1.0,2.0,100.0,0.0,0.0
+6118ae97-0d86-45da-b4e8-4ead6fb9573d,"Jasleen Royal, B Praak, Romy, Anvita Dutt",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+6153f863-aa32-446a-b31c-b9cefd39364c,Sachet Tandon,1,1,1,1,3.0,3.0,100.0,100.0,100.0
+618b6900-0618-4f1e-b835-bccb17f84294,Eric Clapton,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+6286e04b-7bc1-4f22-bca5-fdd34d1b0d93,Nik Kershaw,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+668fd73c-bf54-4310-a139-305517f05311,Willie Nelson,1,1,0,1,1.0,13.0,100.0,0.0,100.0
+66a4b9d2-d5a6-40b8-93d5-0bdd1dbb4b43,"JAY-Z, Kanye West, Frank Ocean, The-Dream",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+67c2f979-2374-4aa9-a085-298784fd44e8,J. Bastos,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+6bbb3983-ce8a-4971-96e0-7cae73268fc4,Jungle,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+6f1a58bf-9b1b-49cf-a44a-6cefad7ae04f,Dua Lipa,1,1,1,0,3.0,2.0,100.0,100.0,0.0
+6fbfece4-f13a-4cd0-81df-81734821be30,Chitra,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+6fe07aa5-fec0-4eca-a456-f29bff451b04,weezer,1,1,0,1,1.0,10.0,100.0,0.0,100.0
+70248960-cb53-4ea4-943a-edb18f7d336f,Bruce Springsteen,1,1,0,0,1.0,1.0,100.0,0.0,0.0
+71bcb5be-394c-4c04-bb38-35982e8a94d3,Robin Gibb,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+72d424d0-c349-4164-ae3e-8e5274f97b98,"Joel Corry, Jax Jones, Charli xcx, Saweetie",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+73e5e69d-3554-40d8-8516-00cb38737a1c,"Drake, Rihanna",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+75939c77-b808-4e79-89ec-71d5cb0d453a,"Guru Randhawa, Asees Kaur",1,1,0,0,2.0,2.0,100.0,0.0,0.0
+75af4141-7eea-4b26-ac87-e3606b4cac14,"A.R. Rahman, Anuradha, Chandralekha Annupamaa",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+77e92ee5-1a51-472e-b03e-3366663cf793,Gary Puckett & The Union Gap,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+793b8f58-80ab-49b3-b5ae-d94034dab10c,Kishore Kumar,1,1,0,1,2.0,4.0,100.0,0.0,100.0
+79c5547a-e098-495c-8dac-7e99546aa46b,"Asha Bhosle, Mohammed Rafi",1,1,0,0,1.0,2.0,100.0,0.0,0.0
+7a1766ba-3d50-428f-b6f5-4d267248c744,Kina Grannis,1,1,1,0,3.0,1.0,100.0,100.0,0.0
+7a6950d8-4df4-4ed7-bf68-f1db1e18fa56,BZN,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+7b545a9d-0be7-4a32-90ff-154489117216,"Joel Corry, Jax Jones, Charli xcx, Saweetie",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+7b748dac-f5ce-45a7-9b95-c1d8b5b013ed,Turnstile,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+7d46fd76-5b71-4d7e-8cef-1ad8b135a109,Kenny,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+7fb57fba-a6ef-44c2-abab-2fa3bdee607e,Childish Gambino,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+80f71f44-b3cd-4386-9768-b3398180f708,Juice Newton,1,1,0,0,1.0,1.0,100.0,0.0,0.0
+8262d8e4-9137-4bb3-a787-3caabbbc13e9,The Used,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+837555ba-012e-45f1-9a9c-9628da13ee54,Ben E King,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+83facc91-8051-4746-82b7-9f67dc35bf48,Palak Muchhal,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+85899c94-25a5-499e-8a23-afc0411b112e,"Kanishk Seth, Kavita Seth",1,1,1,0,3.0,1.0,100.0,100.0,0.0
+8739758b-91e1-4f60-bf45-967a735fc82a,"Akhil Sachdeva, Tulsi Kumar",1,1,1,0,3.0,2.0,100.0,100.0,0.0
+8925a01a-8608-411d-a90b-f3a52d061208,Danzig,1,1,0,1,1.0,3.0,100.0,0.0,100.0
+8970d868-0723-483b-a75b-51088913d3d4,Armin van Buuren,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+89af4cc5-0964-4bd9-80f9-300be400e660,"Vishal-Shekhar, Vishal Dadlani, Shekhar Ravjiani, Shilpa Rao, Mellow D, Kumaar",1,1,1,0,3.0,2.0,100.0,100.0,0.0
+8c32bb01-58a3-453b-8050-8c0620edb0e5,Stone Temple Pilots,1,1,0,1,2.0,3.0,100.0,0.0,100.0
+8e999f06-978a-4bff-8f18-9832403c1da6,Mica Paris,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+8ebd50fe-f263-4fd6-9c24-de587585ef77,Fury in the Slaughterhouse,1,1,0,1,2.0,3.0,100.0,0.0,100.0
+90744b3e-363a-458e-8da1-e3e392a489c4,Wet Leg,1,1,0,1,2.0,11.0,100.0,0.0,100.0
+934cc2a7-822e-4117-8e82-8e663d7d2daf,"Sunidhi Chauhan, Divya Kumar, Amit Trivedi",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+93622908-0806-4173-94c1-9e42597af011,"Sonu Nigam, Kavita Krishnamurthy",1,1,1,1,5.0,8.0,100.0,100.0,100.0
+93ccd76c-3790-4435-a8bf-02bc26294b93,Bush,1,1,0,1,1.0,6.0,100.0,0.0,100.0
+95e3467a-b303-43e0-b44b-20c90e23c387,"Sonu Nigam, Kavita Krishnamurthy",1,1,1,0,3.0,2.0,100.0,100.0,0.0
+96565bef-f9db-4d3e-9c67-36e6444f79b0,Santabarbara,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+96855c21-b832-4366-ba12-0d2330c36a86,Phoebe Bridgers,1,1,0,1,1.0,6.0,100.0,0.0,100.0
+97529a9e-4b5a-4a9c-9c08-c42401d1c268,Aerosmith,1,1,0,1,1.0,4.0,100.0,0.0,100.0
+9ac67cb4-c838-48ad-b28d-1ff2ae58b758,"Yo Yo Honey Singh, Neha Kakkar",1,1,1,1,4.0,3.0,100.0,100.0,100.0
+9b8548a9-5991-42a9-ba96-fe83bd238b7a,"Dom Dolla, Nelly Furtado",1,1,0,0,1.0,2.0,100.0,0.0,0.0
+9ca998cf-c1cd-493b-9a5d-a32fd33859ea,Jim Legxacy,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+9d7cac94-79ac-48e9-8be9-dcdcbb00e3df,"Jasleen Royal, B Praak, Romy, Anvita Dutt",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+9df0c0ec-619e-447d-a155-23e19d9c84ce,Viagra Boys,1,1,1,1,3.0,5.0,100.0,100.0,100.0
+9e0e2b01-41db-4008-bd8b-988977d6019a,The Police,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+9fff2f8a-21e6-47de-a2b8-7f449929d43f,Drake,1,1,0,1,2.0,12.0,100.0,0.0,100.0
+a04e09c8-733c-4430-9e22-99ef9dd5e2d7,Mike and the Mechanics,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+a19b195a-9ba5-4600-8a41-56f373a5b31b,"Pritam, Shaan, Sultan Khan",1,1,1,0,3.0,1.0,100.0,100.0,0.0
+a1bcf3fd-dcf9-4437-b4f4-d8a6ab837396,Melody’s Echo Chamber,1,1,0,1,1.0,12.0,100.0,0.0,100.0
+a1e4720c-2d4d-42a6-8ee0-98dfa9a91ce7,"Atif Aslam, Jyotica Tangri",1,1,1,0,3.0,1.0,100.0,100.0,0.0
+a230f44f-7ca1-4b94-9be7-5042b40a3eab,Farhan Akhtar,1,1,0,0,1.0,1.0,100.0,0.0,0.0
+a2507d4d-3387-4d31-a6e8-f2c9794fb37e,"Joel Corry, Jax Jones, Charli xcx, Saweetie",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+a35237a0-4f47-40a6-b6f3-1e786db23402,Rod Stewart,1,1,1,1,4.0,4.0,100.0,100.0,100.0
+a42d3fd5-55de-4206-86c3-4fbb5404018f,Neil Diamond,1,1,1,1,3.0,3.0,100.0,100.0,100.0
+a688593b-6cf2-46bd-84a8-632240f71265,"Arijit Singh, Asees Kaur, Tanishk Bagchi",1,1,0,0,2.0,2.0,100.0,0.0,0.0
+a80c5dc5-b12e-4667-9f5a-b568961f3839,"Run The Jewels, El-P, Killer Mike",1,1,0,1,2.0,19.0,100.0,0.0,100.0
+a8740949-50a8-4e71-8133-17d31b7cf69c,"Vishal-Shekhar, Lucky Ali, Shreya Ghoshal, Anvita Dutt Guptan",1,1,1,1,4.0,5.0,100.0,100.0,100.0
+ac66ba45-b8a8-4198-88c7-b26fa170f3a9,Melly Mike,1,1,0,0,1.0,1.0,100.0,0.0,0.0
+ac9a487a-d9d2-4f27-bb23-0f4686488345,"Kanye West, Lil Wayne",1,1,0,1,2.0,3.0,100.0,0.0,100.0
+aeb71bd8-447d-4415-8ea1-2b7d664f67e1,"Lata Mangeshkar, M. G. Sreekumar",1,1,0,0,2.0,2.0,100.0,0.0,0.0
+b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d,Beatles,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+b15ebd71-a252-417d-9e1c-3e6863da68f8,Faith No More,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+b1e26560-60e5-4236-bbdb-9aa5a8d5ee19,"Taylor Swift, Post Malone",1,1,1,0,7.0,1.0,100.0,100.0,0.0
+b29020d6-5dbf-4c99-b16f-c009f8a712ff,Steve Lacy,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+b411b3f9-caa3-4bda-9988-f6a3da0a4d2a,Guillaume Poncelet,1,1,0,0,1.0,1.0,100.0,0.0,0.0
+b46ce29c-6c93-4619-8f08-0c23a8bacf0d,Mika Singh,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+b4b5b5a7-feff-47d0-9458-83d0d135a692,Hayley Williams,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+b5156164-d5ed-444a-9e8d-22d0e13fe972,RYTHEM,1,1,0,0,1.0,1.0,100.0,0.0,0.0
+b5c2fdfc-d037-45b8-84f9-09ebb7ff8aa1,Cliff Richard,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+b83bc61f-8451-4a5d-8b8e-7e9ed295e822,Elton John,1,1,0,0,1.0,1.0,100.0,0.0,0.0
+b87041b5-2cad-454a-b6a7-08868c862273,"Sunidhi Chauhan, Divya Kumar, Amit Trivedi",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+bcf3ad0b-4eae-4c8b-a292-9f4c573aa27a,Samantha Fish,1,1,0,1,2.0,3.0,100.0,0.0,100.0
+bd13909f-1c29-4c27-a874-d4aaf27c5b1a,Fleetwood Mac,1,1,1,1,3.0,3.0,100.0,100.0,100.0
+bdbafa57-cf3f-4b7e-b956-fb6e0071ecd4,Shankar Mahadevan,1,1,1,1,5.0,5.0,100.0,100.0,100.0
+bf0f7e29-dfe1-416c-b5c6-f9ebc19ea810,Bee Gees,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+bf2ad9da-62b7-4a8e-8e98-a7dccb2677e6,"A.R. Rahman, Anuradha, Chandralekha Annupamaa",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+c262b6bf-be56-4b26-bceb-42d7a27342f3,Mike Shinoda,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+c2e36518-9c3b-4dcb-82ad-a3fc7fe99c67,Nancy Sinatra & Dean Martin,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+c3d14b41-a48d-488f-bfed-ce0597bb0b1f,Kenny Rogers,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+c42e60f4-4520-4954-b6e4-82bbdf532c11,JPEGMAFIA,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+c4df30f5-5487-4806-9189-b69c9f27532c,Carly Simon,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+c564ca3a-cf3b-4192-807e-b3a46c26cc5e,The Sophs,1,1,1,1,3.0,8.0,100.0,100.0,100.0
+c59a98b4-875e-473a-a05e-307bb9c4ea35,Junior Varsity,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+c7a3e868-c6d8-4512-a5ef-f6cbe42899b0,"Run The Jewels, El-P, Killer Mike, Kamasi Washington",1,1,0,0,1.0,1.0,100.0,0.0,0.0
+c81f7820-ee5b-46ef-9b78-027d38b9a1aa,Scowl,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+c842d29f-a297-48cd-bb71-4f77fd672b16,T.Rex,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+cab516b4-ce33-4010-9d89-4b4efa027140,"Shankar Mahadevan, Alyssa Mendonsa",1,1,1,0,3.0,2.0,100.0,100.0,0.0
+cc197bad-dc9c-440d-a5b5-d52ba2e14234,Coldplay,1,1,1,0,3.0,2.0,100.0,100.0,0.0
+ccce2053-7007-4c36-b1e7-f8fcf5023a12,Dexys Midnight Runners,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+cd67b8c8-8b2f-4d56-b564-fbd837490256,"Diljit Dosanjh, Badshah, Raj Ranjodh",1,1,0,1,2.0,4.0,100.0,0.0,100.0
+d0a69015-e585-4e2a-8967-7ff50c505c18,Secret Service,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+d43d12a1-2dc9-4257-a2fd-0a3bb1081b86,Johnny Cash,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+d598882d-bb4b-49ea-849e-301d6174bbab,"Raghav Chaitanya, Manoj Muntashir, Pritam",1,1,0,0,2.0,2.0,100.0,0.0,0.0
+d628b239-1940-41a7-99fc-9f848a99fd27,"Aditya Rikhari, Tulsi Kumar, Lijo George-Dj Chetas",1,1,0,0,1.0,1.0,100.0,0.0,0.0
+d6c0def5-c2f1-4747-a36d-e71487f25795,Zombies,1,1,0,0,1.0,1.0,100.0,0.0,0.0
+d87e52c5-bb8d-4da8-b941-9f4928627dc8,ABBA,1,1,1,1,4.0,7.0,100.0,100.0,100.0
+d8d3e7de-793e-49fa-8bb8-6bc732d4c8aa,"Shankar-Ehsaan-Loy, Sonu Nigam",1,1,1,0,3.0,2.0,100.0,100.0,0.0
+d8df96ae-8fcf-4997-b3e6-e5d1aaf0f69e,Temptations,1,1,0,0,1.0,1.0,100.0,0.0,0.0
+da778448-dd56-40a0-9429-3dfc34ef4cd4,LL❦,1,1,1,1,3.0,3.0,100.0,100.0,100.0
+db7fb490-d527-447f-9d40-ed91c479d5ee,"Neeraj Shridhar, Kavita Seth, Pritam",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+db92a151-1ac2-438b-bc43-b82e149ddd50,Rick Astley,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+dc73bb40-b697-4df9-a2ec-0555bebdba75,Sweet,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+dcad99e7-3c3e-4c78-bf8a-68203e17da48,"Kanye West, Jeezy",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+df9a1914-7fad-4900-bdd4-d7811712a2a8,Air Supply,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+e0bba708-bdd3-478d-84ea-c706413bedab,"A.R. Rahman, Anuradha, Chandralekha Annupamaa",1,1,1,1,3.0,5.0,100.0,100.0,100.0
+e0c97a4d-c392-41a9-a374-57af3e3eeab3,Geese,1,1,0,1,1.0,5.0,100.0,0.0,100.0
+e0e1db18-f7ba-4dee-95ff-7ae8cf545460,"Kanye West, Kid Cudi, Raekwon",1,1,0,0,2.0,2.0,100.0,0.0,0.0
+e1197f1a-be26-4bcc-b694-d6e304886758,"Akhil Sachdeva, Tulsi Kumar",1,1,1,0,3.0,2.0,100.0,100.0,0.0
+e21f19cb-0e60-4f64-b14c-cdf0f03d4a9e,Laurent Voulzy,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+e2f526c6-09ed-4ef3-aa05-452eb12ff192,"Harrdy Sandhu, Tanishk Bagchi, Nikhita Gandhi, Jaani",1,1,1,0,4.0,1.0,100.0,100.0,0.0
+e33c460f-011a-469a-b934-08932a3729c4,Richard Marx,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+e3f7631b-e50b-4923-9049-2fa84dfcaf71,Bones,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+e520459c-dff4-491d-a6e4-c97be35e0044,Frank Ocean,1,1,1,1,3.0,4.0,100.0,100.0,100.0
+e57f0cac-4f56-473c-8d7e-d93f753fd586,Steve Miller Band,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+e85ed93b-c1ca-4692-8293-1747e28a3ded,Luisa Fernandez,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+e9347abe-608e-4d8a-88c5-62e41183e903,Van Holzen,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+eb9eb9f8-c691-4fef-9bdf-0cbffbfa42ee,Cannons,1,1,0,1,1.0,7.0,100.0,0.0,100.0
+ebfc1398-8d96-47e3-82c3-f782abcdb13d,Beach Boys,1,1,1,1,3.0,3.0,100.0,100.0,100.0
+ecfc32cb-b26e-41a0-8b41-7100c6a3fcc4,Kraftklub,1,1,0,1,2.0,5.0,100.0,0.0,100.0
+ed29f721-0d40-4a90-9f25-a91c2ccccd5e,"AP Dhillon, Gurinder Gill, Intense",1,1,0,0,2.0,2.0,100.0,0.0,0.0
+ed3f4831-e3e0-4dc0-9381-f5649e9df221,"Sachin-Jigar, Arijit Singh",1,1,1,1,6.0,9.0,100.0,100.0,100.0
+ed8e205b-2b03-48f8-b068-37b7a553fdad,Puffy,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+f252e893-55f2-4415-9896-1aadc78d5d41,Lady Parts,1,1,1,1,4.0,9.0,100.0,100.0,100.0
+f31ec2ac-9071-4306-acd1-d2c8321033b5,Bangles,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+f5a454ec-9c6c-4a98-8676-6378c6996926,"Pritam, Arijit Singh, Shashwat Singh",1,1,0,0,2.0,1.0,100.0,0.0,0.0
+f7ea1e79-21bf-4dc9-a427-d2c43f5aadd0,Hot Butter,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+f82bcf78-5b69-4622-a5ef-73800768d9ac,"JAY-Z, Kanye West",1,1,1,1,4.0,6.0,100.0,100.0,100.0
+f8c60bd3-6b87-43b0-a35e-0c2231c98c83,NxxxxxS,1,1,0,0,1.0,2.0,100.0,0.0,0.0
+f931c961-b647-4861-be8c-f47d84a4de51,Diljit Dosanjh,1,1,1,1,6.0,14.0,100.0,100.0,100.0
+fc0a5289-4b77-4246-9c8d-857c8b617f5d,Art Garfunkel,1,1,0,0,2.0,1.0,100.0,0.0,0.0
+fc9ec2b3-b44a-4dad-8bc3-ff3738ee02ae,Herman's Hermits,1,1,0,0,2.0,2.0,100.0,0.0,0.0
+fdf25d7c-d8f4-4736-ad24-bf2286a61254,"Sachin-Jigar, Arijit Singh",1,1,1,1,6.0,5.0,100.0,100.0,100.0
+ff0fd469-60c7-4bef-acd0-8f5858cc6d19,Von Wegen Lisbeth,1,1,0,1,1.0,13.0,100.0,0.0,100.0
+007554f9-945c-48cb-a825-17dcb3c5fbd2,Kenny Rogers,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+00b25dc2-ace6-4d32-9142-9a1d3bf20b45,DJ Ozma,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+00fc05b6-4a0d-4e0e-be4c-2cd4b94ce1e9,Sid Sriram,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+013e6bdf-5861-4c2b-ae8d-7f05cef3b846,Burning Earth,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+01af044a-dc16-4c46-a160-6d2711a1a127,Waldkauz,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+0203a5bf-e3f9-4314-ac94-f10213940afd,"Arijit Singh, Asees Kaur, Tanishk Bagchi",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+0221734a-35a8-40f7-b5c5-2f61a200bc7c,"Calvin Harris, Frank Ocean, Migos",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+0393f9de-9e48-4c12-a6bd-5368a9d3d845,Follia,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+052b765e-c210-44d9-8f91-953da0ac118d,Bernie Paul,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+059310fe-67d9-42f8-ada9-c6844c4196a2,Luv,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+06a4a555-1b69-4175-83df-2528a8e5af05,Donots,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+0a172f7d-b3b1-40bf-833d-192892e04b5a,Heinz Rudolf Kunze,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+0a6b2b82-5161-4c98-a952-5fd4fb46ce8b,Leapy Lee,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+0b5df3f3-7f4c-4ffb-9279-dbab6cd9bea5,Little River Band,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+0bbbc496-c7b5-4b3f-bb6d-bd312827d6e5,Roy Orbison,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+0c2d1de8-fc3a-4ca9-a90b-eea69a5968a5,Chris De Burgh,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+0caa0e8e-0f9f-4022-bc73-077598ff6d67,Panta Rhei,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+0d93bce3-9b7a-49ec-985c-8e7c16608d5d,ZEF,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+0e594664-a1ba-44cf-b605-cd1e8519cde1,FOREIGN FOREST,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+0ece6fd9-6a25-4d78-82a2-971dfaeb1b18,Velvet Negroni,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+0efaa6e3-3ef1-4481-bc01-aa3d5901dbdc,Johnny Nash,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+0ffe666f-5f7c-4cd1-b07e-dbb6eac41a50,Sam Austins,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+1129817c-488a-4096-80c1-77fc1b107c93,Tracy Chapman,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+1138a764-2212-4d0a-b02d-0dc14df91e08,"Akon, Hamsika Iyer",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+120d7ba0-73e1-4e96-98e3-e75f60f232e8,Scott Mckenzie,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+12398bf3-1b99-47b7-930c-f3956773f35a,Rejjie Snow,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+124fa000-44ae-4171-bbd0-c5d000a616a6,Izhar Cohen,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+13655113-cd16-4b43-9dca-cadbbf26ee05,"Dom Dolla, Nelly Furtado",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+138214b3-1050-45f5-8f37-9a872b02ed1b,"Mohammad Faiz, Jaani",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+1513f4b1-5b9d-4d03-8f4d-e38b05d1ad49,TNT,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+151cd917-1ee2-4702-859f-90899ad897f8,FINNEAS,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+15766a8a-755b-44ae-9b17-ebf4abaefd31,Italian Beaches,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+165e2705-abf7-4f1b-8971-4ceed8769c4d,Smokie,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+16963107-9288-43a2-946c-81de2f5eddfa,Sandie Shaw,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+16f7e748-59b4-4705-959c-9276be0ebf6a,Superheaven,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+17995d1c-5b3c-4ee9-98f5-105ee3b4ada1,Eddie Cochran,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+18096377-327a-490e-a8d2-cee1c7979d61,"A.R. Rahman, Naresh Iyer",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+1ade789e-c133-43f3-8a92-ec69a30acb85,Opus,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+1b29e206-b197-40a4-bc4b-911a4ff7f32f,Second Wife,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+1b5e95dc-6ec5-496c-a9fa-027a40366f15,Von Wegen Lisbeth,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+1c46e82f-4764-4d82-a33b-5d5aee5e2881,Fergie,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+1dd8b80b-f507-4958-9067-b971310f2bbf,Mitraz,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+1efc93cf-3d3d-4b2c-8900-6970f39fbae3,Lonely God,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+1f223eed-aa38-49da-9e76-62ab3adc2e04,Bobby Darin,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+20395131-fbde-43ce-b141-b700cfdae99c,Glass Animals,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+215394ba-3d0c-4b57-b284-ec5bb4a5ad25,Gilbert O'Sullivan,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+223917c5-728e-4c40-8e55-7e5d65b108fa,GRENZKONTROLLE,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+225bf078-adde-4b2a-8a05-b0057e89af44,Sam Phillips,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+22f54aa9-3408-4de4-b953-cd44564f10a4,"Manna Dey, Lata Mangeshkar",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+23b2cc78-7595-4630-bebb-a349a4f25262,Howard Jones,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+2469950a-f0ca-425a-bfbc-baf55ea3afde,Kool & The Gang,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+25bb0299-9c72-4d7e-877d-94ba70822f45,Hues Corporation,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+27638856-79a1-4495-b7da-1912899560c7,Yung Bambi,1,0,0,0,2.0,1.0,0.0,0.0,0.0
+282259f5-4979-4301-94ef-bcaecaeb553e,BENNETT,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+2851f8c0-f215-4a06-a3de-5c4c04fa8010,Transsylvanians,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+28c54157-2e57-4cbb-a47a-947dbfeb39e0,Katherine Ho,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+29c411a7-d182-4baa-a396-8c08548326fd,"Badshah, Diljit Dosanjh, Aastha Gill",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+2a66300a-7b80-42a7-b006-f8b2439a9019,"Arijit Singh, Shreyas Puranik, Siddharth - Garima",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+2af13455-6062-473c-af2a-804a0ac7f641,John Paul Young,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+2c33c2ec-c6ef-4803-8313-7e698c0b2efa,Zirp,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+2caa54a7-b08c-41da-b892-3a41abe778be,Jimmy Cliff,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+2ebe6a97-e436-4c38-8895-35ecc5274e84,"Anurag Saikia, Raj Shekhar, Romy, Amarabha Banerjee, Varun Jain, Madhubanti Bagchi, Mismatched - Cast",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+2f2124fe-32ae-4715-918a-8e23b843cf07,Lights Dim,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+2f548675-008d-4332-876c-108b0c7ab9c5,Sia,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+2fd6f2b0-832e-4c6b-896a-cfbead330fca,Hedningarna,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+301b45a4-b8b9-410e-8344-4b4eaf96691a,Marshmello,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+3058822f-8e58-4427-820a-8f7a279887c1,Heinz Rudolf Kunze,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+31445b1e-96f3-4c7f-84ec-dd02e647e690,GASHI,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+32590def-5684-4649-89cd-48addfafff4f,The Moon and the Nightspirit,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+32689299-a2fe-40e5-a4f3-b8ac5fa3e5da,Somatoast,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+32f2d6bd-c22b-42cf-a7bc-0c4b48cd2bcb,Joe Cocker,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+331ce348-1b08-40b9-8ed7-0763b92bd003,Roxy Music,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+332541fd-52b2-4f7c-9e0a-87a18cea2ab5,Pyrame,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+3387684e-6fc3-41fb-83f8-5c58026d7a4e,"Aashir Wajahat, NAYEL, Nehaal Naseem",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+364f3cef-442b-4182-ae78-4e7e79683c24,Albert Hammond,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+36c8b01c-cd8b-4ecd-b3fd-9f4f73371d2b,Angel Du$t,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+36cb1e0a-0d39-4c36-b123-88271a7e730a,Versengold,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+373a4c98-a46b-48e4-86ec-f6ca65b4f438,Chance the Rapper,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+37547347-ea75-45fa-9766-ff36b44d8147,"Isaiah Rashad, SZA",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+393e5448-896f-43e9-b80b-4ee58e1e71a4,Ronettes,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+395cc503-63b5-4a0b-a20a-604e3fcacea2,Men At Work,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+3aebd566-7ff8-4b29-b017-051b6ec55861,"Run The Jewels, El-P, Killer Mike, Travis Barker",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+3cb25fb2-5547-4b05-adec-1a5e37830d46,Lionel Richie,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+3d254f1e-7d18-431b-baeb-68e57695dfdb,Blood Orange,1,0,0,0,2.0,2.0,0.0,0.0,0.0
+3dc30744-48ad-4e74-889a-246273e5e344,Lobo,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+3df3818e-7984-4c62-bee3-81f95f8c6651,Beach Fossils,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+3ed29133-283e-4787-b57b-f128b7b4c0f5,Adam Is A Girl,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+3f5be744-e867-42fb-8913-5fd69e4099b5,Chicago,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+3fb55c03-3ad9-4341-8d0b-7c4c49aefca0,Platters,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+416c9d18-f891-4acf-a1e9-ba76fd2526be,Annwn,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+42922db2-2e80-44b8-9cdf-0b3a6634c124,Yazoo,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+42ea488c-965b-4a0c-ac9b-d92306023ea7,"Manak-E, Selina, R.D.B.",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+4382b934-64c3-47ac-98db-65f26d845c48,Bob Seger,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+43b58c98-3779-4b04-9a23-1c95cca3a145,Erasure,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+44183f42-a853-4e50-98e1-7ee271c8a57c,"OAFF, Savera, Lothika, Kausar Munir",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+45425c84-9092-4e2c-b732-e1d0280b580a,Tyla,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+457f4d5c-462c-4a74-95f4-8cc17fa86687,"Manak-E, Selina, R.D.B.",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+4580d83b-093e-4241-91fb-2dd71f5f1f3f,Carpenters,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+462bd7fb-5be2-43e7-8d1d-177419620dbe,Sherbet,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+46a782ea-4308-476b-abd1-a91b197f3037,"Crosby, Stills, Nash And Young",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+477b8c0c-c5fc-4ad2-b5b2-191f0bf2a9df,Armin van Buuren,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+47c8a452-4efb-45b4-a0d3-df506dbe42b2,Wang Chung,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+47fd1900-8606-4efb-800b-02b032670631,"Aashir Wajahat, NAYEL, Nehaal Naseem",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+48262e82-db9f-4a92-b650-dfef979b73ec,Future,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+4967c0a1-b9f3-465e-8440-4598fd9fc33c,Enya,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+498f2581-be21-4eef-8756-fbb89d79b1c0,Linda Ronstadt,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+4a76400d-283f-492e-9754-18ef41755f81,Isley Brothers,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+4acc9a7a-74f8-4bcc-a6a7-ce98555092a0,Fox,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+4b0be624-6b87-47e8-bbf0-588a2c6c0439,J. J. Cale,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+4b49f1b3-f2c9-4e44-b85e-1691107ca654,"DANNY AVILA, Sam WOLFE, HNTR, Rome Fortune",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+4c0d9acf-a8a1-4765-9c56-05f92f68c048,Spandau Ballet,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+4c124cc5-b7e1-4aee-bdd0-201972328803,FOREIGN FOREST,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+4c671d5a-7027-4398-8055-03e61d1a3967,Cults,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+4c73b58a-fb2f-49e3-aaa6-3fcb4a2797f3,Joi Barua,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+4d5447d7-c61c-4120-ba1b-d7f471d385b9,John Lennon,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+4d7304f6-7fe3-4959-9d98-01a5af84afe6,Trey Songz,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+4db8e5a9-beb9-47bb-8bc8-334b7e33ece5,"Salim–Sulaiman, Vishal Dadlani, Shweta Pandit, Amitabh Bhattacharya",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+4e6daf86-a5c9-42ea-9bd2-9482a71c38d4,Eric Carmen,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+4e7cd0ca-74c9-4d68-b389-7558cebce0e7,Oracle,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+4f20b118-979f-4f74-86a1-e361b3ef11d2,"Anurag Saikia, Raj Shekhar, Romy, Amarabha Banerjee, Varun Jain, Madhubanti Bagchi, Mismatched - Cast",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+502cf908-9921-48bc-bf0e-265c881c0156,sombr,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+5277ad2d-eb7e-47bf-bda5-63a5d8034e51,"OAFF, Savera, Lothika, Kausar Munir",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+52bb713d-b0c9-4bf6-9f58-392388d5cc11,John Powell,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+52c06bab-56f7-4646-8c78-d1771ae7d438,Racey,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+538d0469-940e-4a84-911e-d6ecab33f974,Phlegmatic Dogs,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+5422ef5d-00d4-4c7a-81ab-03cb8fc3cc45,Squid,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+549e1b66-0898-49f1-bf5c-0c7195a08fbe,WAX,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+54d7b0f8-196c-46db-9ee9-3b3ef86a5ea9,Barry Blue,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+56419bf8-9acf-4920-b951-7f4957dd44a7,LEAP,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+5642774a-72c0-4099-8da4-7c1ab36378a8,Stephen Stills,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+56756959-1e78-429c-b897-e1d056cb0225,"Dom Dolla, Tove Lo",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+56d9908f-548e-40c1-837f-cd006d79d3a0,Nancy Sinatra & Lee Hazlewood,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+5721c227-4caf-48b1-bbfc-1a4ed3276963,Marshmello,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+573c4465-c0b6-4233-8dfe-92b4e64779c3,John Kincade,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+576d8ccd-11e5-431b-a2f7-dbdec511fe92,"Akon, Hamsika Iyer",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+57976431-1a5c-4968-a422-b92c5e9b0d4f,Glen Campbell,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+585a4449-2a50-4fc9-910d-e76b46c22718,Rejjie Snow,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+58ef1e74-bcba-4cfa-a5aa-d27e39677e22,Sapna Awasthi,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+5943471e-99e5-4540-803e-d76175946916,LOWLIVES,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+59f58924-dd1c-44a6-9b9d-b0b699c72de3,Simili Gum,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+5a93692c-4db2-4cac-a1b6-206f6681420b,"Arijit Singh, Asees Kaur, Tanishk Bagchi",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+5ae40d3f-e429-4baf-9fe9-bcdaa9c81f39,Toto Cutugno,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+5b11f4ce-a62d-471e-81fc-a69a8278c7da,Nirvana,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+5b8ec72b-9e39-4a06-a2bf-964166b92a71,Trey Songz,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+5c680386-06e8-4102-8b7f-efb4b6b2e21b,Steven Gutheinz,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+5de80871-f721-4c7c-b0c5-4ad0d350c232,Kraftklub,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+5e6c760b-42e0-4df4-a221-0269355da00a,Nancy Sinatra & Dean Martin,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+5f606b3d-fab7-4d39-bcdb-f5d42edae945,Del Water Gap,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+5f722267-befb-462c-94a9-943c6f8a7b99,"Sachin-Jigar, Saba Azad, Ankur Tewari",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+5fa5c9fc-9d9c-4c0f-ad27-10333051084e,"Dominique Cerejo, Clinton Cerejo, Loy Mendonsa",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+5fc7fee6-3bcd-4421-97b3-3935efd87668,A.CHAL,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+5fd72c88-eda6-42f4-a129-4bcac81ddd1b,A Cerulean State,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+6030ced0-1ada-49ae-a81f-16463f37461e,Tony Carey,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+60f4145a-8854-49d9-89df-6c0f9531ded2,Dunkelschon,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+6143403a-df6c-429e-8ee6-ef869896b0da,"Quavo, Lana Del Rey",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+61af87f4-16ee-4431-8504-cc06187079fb,xxxtentacion,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+625f1d57-8bac-4a3a-97af-f407f2967755,Maynard Ferguson,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+6484d854-8ed7-4db2-9900-214f2ed49a9e,"Arijit Singh, Asees Kaur, Tanishk Bagchi",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+64b94289-9474-4d43-8c93-918ccc1920d1,Billy Joel,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+650e7db6-b795-4eb5-a702-5ea2fc46c848,Lady Gaga,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+65710ace-d0ea-45eb-afb7-291e6b13bee5,Dave Davies,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+658ee795-fbfa-4d6a-8674-e4d31e87f057,Arthrn,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+6655955b-1c1e-4bcb-84e4-81bcd9efab30,Ólafur Arnalds,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+66915ba6-9fef-41b5-9645-a612ab465e79,Peter Kent & Luisa Fernández,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+6784a4ce-1737-49c0-bda1-2d98aeb19f26,Rapalje,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+6839f575-794a-4121-8e36-7a2e52864754,"Lata Mangeshkar, M. G. Sreekumar",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+6863276d-61a2-4bee-a86b-70136be2d668,Wayne Cochran,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+69a7ca4d-588e-4426-9868-434810f6a9d9,Andoorn,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+69c4cc43-8163-41c5-ac81-30946d27bb69,"CunninLynguists, Killer Mike, Khujo Goodie",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+6acb932e-840d-47ac-8e0d-725ad8a6e52c,New Found Glory,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+6adf7935-fbf4-4590-a64c-05085f1b348e,Richard Dorfmeister,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+6b0b4484-442e-489d-bb8e-5e79dcd8e5f4,"Benny Dayal, Shreya Ghoshal",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+6b69e1fa-0dd9-4be0-a5f0-dfb46f379c8d,"Atif Aslam, Alisha Chinai, Pritam",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+6bd32857-c9fa-484f-9ef7-90c655d08c0a,Kailash Kher,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+6bf5af0d-9536-4700-b400-5bacbeed5a78,"DANNY AVILA, Sam WOLFE, HNTR, Rome Fortune",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+6c35e4b3-d9d2-446a-932b-6cda4e2a11f1,"Anurag Saikia, Raj Shekhar, Romy, Amarabha Banerjee, Varun Jain, Madhubanti Bagchi, Mismatched - Cast",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+6cb5d1ca-03ce-4656-92f5-bf35f53d1582,Free,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+71dbc4b0-fd7a-4d28-bc0e-841c9feb7357,A La Carte,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+7301eedc-ec8a-4765-ad99-0f8fe8eed8e1,Pisse,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+743df3d2-796b-4356-9f83-2948997cae9e,Tim Vantol,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+753a1564-aaef-4d39-bc68-4a8d5e328cf7,"Miike Snow, Run The Jewels",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+758cdd59-8341-4500-a7b7-37341258dc15,"Sonu Nigam, Sabri Brothers",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+75e2c2fa-3d26-4934-be2a-7af4547d6ed8,Dublin City Ramblers,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+763ca800-924d-4193-93d2-0d8f0498ca1d,Animals,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+79239441-bfd5-4981-a70c-55c3f15c1287,Madonna,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+793e220b-64f8-46d9-954d-e033dbcfeef4,"KIDS SEE GHOSTS, Ty Dolla $ign",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+79feb79b-8f0d-4306-b30a-e28bd88c9323,Alison Moyet,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+7b54e5e4-82f7-4dfe-9cd8-fc8d9f6815e3,Audrey,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+7bb60591-46f3-4147-b692-1814a87e832e,Barry Manilow,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+7d120305-ad04-41e9-b482-dc669d89cf0a,nobodyknows+,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+7e769308-3c3a-4b7e-949d-59d9e6c44fb2,"Aashir Wajahat, NAYEL, Nehaal Naseem",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+7e960f8c-9a68-4a98-8e99-679d71552131,Hearts Grow,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+8032cf05-d916-4b2a-9c53-6e75d4a24bd8,Trippie Redd,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+808c1fbb-ccfb-4b15-a541-72bec155e696,"Kanye West, Dwele",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+809a85c1-66e0-40f2-ad68-80169b7e23e5,Richard Dorfmeister,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+810b210f-b461-4f02-aff2-dff91196147e,Prateek Kuhad,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+81d5afc3-c2bd-4f0c-a2c8-9cddad97e2a8,The Tumbled Sea,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+82b1f5fd-cd31-41a9-b5d4-7e33f0eb9751,"JAY-Z, Kanye West, Otis Redding",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+8311dfab-bcf5-455f-aa60-3010a1f502a6,Moti Special,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+831fdf15-3712-4655-b6f6-da3268b9b096,"Sagar Verma, Mismatched - Cast",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+83b9cbe7-9857-49e2-ab8e-b57b01038103,Pearl Jam,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+850a8b03-98a7-4fd3-afbd-5e5520b4ef5f,Conan Gray,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+859d0860-d480-4efd-970c-c05d5f1776b8,"JAY-Z, Kanye West, Beyoncé",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+8716f569-77ce-4044-a578-26c2f142c67a,Bruno Sanfilippo,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+88485cc4-5b91-482e-b82d-39d8ff961b71,"OAFF, Savera, Ankur Tewari",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+88527d26-7496-47c5-8358-ebdb1868a90f,Jackson Browne,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+88543892-2eef-4a6a-a84c-5b8502b80421,Rick Springfield,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+89e589ea-b34f-4d27-8138-9f94dea45271,Jyoti Verhoeff,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+8a0c3b86-af55-42d2-85b9-6372e7430986,Madsen,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+8ac5bea6-3a62-4e28-9df7-03f24d4c06fc,Desmond Dekker,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+8d807ef3-1109-4531-ac1b-dbafc603ef28,The Dolmen,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+8db89d52-afb2-41c2-8c4a-7f6d4e2451c5,Ivan,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+8dce8a2d-8ed5-4672-b25e-bfe198b02b82,Manhattans,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+8dd98bdc-80ec-4e93-8509-2f46bafc09a7,"Calvin Harris, Frank Ocean, Migos",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+8e6e6340-2c9e-4fa2-b6f9-0cc2ade362fd,"Sonu Nigam, Hema Sardesai, Shankar Mahadevan",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+8ec53081-d2cd-4ab0-b62f-b340949bbcab,Pyrame,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+8ed2e0b3-aa4c-4e13-bec3-dc7393ed4d6b,Thom Yorke,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+8fd5c9f3-4a4a-4837-a076-b38d8826ddc1,"Badshah, Amaal Mallik, Fazilpuria, Sukriti Kakar, Neha Kakkar",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+90b5e47b-e432-47ab-99c1-97f85c88dc9a,"A.R. Rahman, Daler Mehndi, K. S. Chithra",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+920febb2-ea05-4339-8a08-17294e60c736,Chubby Checker,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+9309024d-40ba-4c5b-b636-31e3288b551a,McGuiness Flint,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+93ae8651-24ee-406c-b927-eb7cd773ae38,Liam Payne,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+93e6118e-7fa8-49f6-9e02-699a1ebce105,The Local Train,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+94e002eb-e3d9-4d4e-8ee3-fbeeb3dbe265,Yung Bambi,1,0,0,0,2.0,1.0,0.0,0.0,0.0
+95148418-895a-4a8d-babe-10bf257e3cde,Richard Dorfmeister,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+960afc67-9c21-46dd-9c7f-ff2b509e3150,Jane Remover,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+96637f03-b568-460b-acde-f2c8547d70a0,"Savi Kahlon, The Masterz",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+9689aa5a-4471-4fb4-9721-07cecda0fa9f,A Tribe Called Quest,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+986e466c-7efb-49cc-8034-d05a4af5ab75,Lil Xan,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+98744f0b-20fc-4bb2-9ac4-e2041058911f,Eddie Murphy,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+9880800a-f6f8-4f8f-a00e-b4b664776c0c,"Kendrick Lamar, Jay Rock",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+98a30afe-5737-4616-aa8b-e55075196028,"Dominique Cerejo, Clinton Cerejo, Loy Mendonsa",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+98eb9014-d4d2-4658-82dd-b1a251113ea5,Israel Houghton,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+98ed8b37-8764-49fc-a9f8-87050d1cef8e,The Busters,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+9c779b33-ba62-4170-b036-524ab40bd225,"Dominique Cerejo, Clinton Cerejo, Loy Mendonsa",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+9c88965e-b1e1-4091-94f3-9ab119976034,Instupendo,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+9da378d4-2a00-46c7-8050-26d51dd522ac,"Shae Gill, Ali Sethi",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+9ddf4b19-dd14-45d9-b056-49541b16dc80,Russ,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+9fef8897-8e04-455c-9ac4-cb4c0f855dc5,Obongjayar,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+a03e6b7e-3a8f-4840-98b2-22bb843cadd9,OG LU,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+a14735a6-c15e-4443-95e7-bbb9c8c70ee4,Von Wegen Lisbeth,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+a1db6190-4f83-482e-a794-0088b2b4136d,Garmarna,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+a45efc83-7752-4d35-a49e-08e4d60a8dd1,"Manak-E, Selina, R.D.B.",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+a48bbde5-a068-48ea-b4db-d516209010b3,GASHI,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+a6a6fea9-f3df-4347-aa31-971fcd7a7994,Mika Singh,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+a717be4f-8b3d-4355-b33c-2b84f88fe40d,Glenn Frey,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+a749130e-c2d8-4a7c-b740-908ea4574961,Hot Chocolate,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+a74b1b7f-71a5-4011-9441-d0b5e4122711,Radiohead,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+aab5c954-cabe-432e-899e-1c4f99757327,Toto,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+aabb1d9f-be12-45b3-a84d-a1fc3e8181fd,"Tiësto, Charli xcx",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ab18b45f-6fca-47d0-99c9-a28d8f09c0d5,Ankur Tewari,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ab461515-3882-4f66-9009-9bba9f3a99e1,Feine Sahne Fischfilet,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ad10c69c-0cae-4c27-934d-a02e4ecc9985,Cafuné,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+af76ce12-29ff-4c8f-a6b1-1b5bfaf33f79,Pussycat,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+afa923ab-bd12-471f-b996-c2af179af4bd,Jermaine Jackson & Pia Zadora,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+b071f9fa-14b0-4217-8e97-eb41da73f598,Rolling Stones,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+b0799818-22cb-4564-8e68-3c410d0722ee,Silverchair,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+b1fb6a18-1626-4011-80fb-eaf83dfebcb6,Jill Scott,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+b280e668-15dd-4b64-80fb-130066bc0304,"Arijit Singh, Aditi Singh Sharma",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+b2a50198-9d28-40d9-a223-6d862ed9e005,"Ikka, Diljit Dosanjh, Badshah, Sez on the Beat",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+b38e4795-c296-419e-ad26-4ef318c4fe4a,"Badshah, Amaal Mallik, Fazilpuria, Sukriti Kakar, Neha Kakkar",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+b46efb1e-ecd9-4044-9820-14c64c2d657e,"Anurag Saikia, Raj Shekhar, Romy, Amarabha Banerjee, Varun Jain, Madhubanti Bagchi, Mismatched - Cast",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+b5997eef-2516-491a-a10e-5cee842bbcdc,Louis Prima,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+b59ac58d-036e-4bba-8112-c32a34c4575b,Jerry Lee Lewis,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+b5ffc3aa-b868-4b88-905f-d73d51dbe51c,Mick Jagger,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+b60527cc-54f3-4bbe-a01b-dcf34c95ae14,Donna Summer,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+b70dac8e-0aa1-4104-ac1d-968c61dfa7a2,William Pitt,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+b7539c32-53e7-4908-bda3-81449c367da6,"Quavo, Lana Del Rey",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+b83d4d61-e118-4360-b613-43229fe5207e,Spark Master Tape,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+b8549efe-f4fd-4dc0-8ef1-226e9c400233,Monkees,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+b896aa8c-2761-40ce-b485-0e1fffd26167,Dusty Springfield,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+b8ddd15a-4370-4b27-bc28-940c043aeb82,Anand Raj Anand,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ba147912-dc39-416f-9e4b-09765d671674,Limahl,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+bb6eaced-69dd-4636-829f-9f987acc4fc3,"The Temper Trap, John Summit, Silver Panda",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+bbe94033-40e5-4350-abe6-ac5af4c24079,Toshiro Masuda,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+bcb478f4-dbf9-4bc8-823e-bec7986d652b,FJØRT,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+bcb85c60-7be7-476e-8ee6-d39d83dd7c0f,Anjana Vasan,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+bcf7743a-0c93-4882-9323-3c5e0f0d4454,Die Nerven,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+bd21b7a2-c6b5-45d6-bdb7-18e5de8bfa75,HOUND DOG,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+bda9891c-f6a4-442b-8f1c-65429c3347d8,King,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+c1aa2ec9-53e7-4d90-8d36-bac75832e986,Diana Ross & The Supremes,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+c1d4f2ba-cf39-460c-9528-6b827d3417a1,Yes,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+c1e5344e-1bff-4727-9417-a4f55e41b5ff,Loreena McKennitt,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+c219ec10-39c9-4ef9-9169-2d9bd01a1519,Sailor,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+c2e49f7a-cd6f-48ca-8596-b03614ea4fe8,"Consequence, Kanye West",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+c322df7e-7836-48df-bcf2-9c419ff417eb,Fantastics,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+c589e4c7-36d4-43c6-b170-f9ab78b7d4a4,MARIA,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+c5df1ac0-c42d-4a03-81df-0b716071c453,Virelai,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+c707b37e-cb5c-4694-be4d-46beefcb2475,Chris Rea,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+c78c3026-426b-4580-ab23-08490bb8b515,Rae Sremmurd,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ca825016-f7fd-4ccf-a523-6ee36ea88828,Gladys Knight & The Pips,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+cae4fd51-4d58-4d48-92c1-6198cc2e45ed,Jill Scott,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+cb65eb0a-f624-4cf8-9144-066601f60597,Rejjie Snow,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+cbe7746f-d4b4-4f0d-a435-1aa181d97b1b,Lady Gaga,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ccbdc2ab-1055-44d5-8417-a6b4898bf91b,Jermaine Jackson & Pia Zadora,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ccdef5a5-d987-46f0-a04f-8ee37bcf28b3,Samantha Fish,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+cd4131f3-c7c5-45ca-8f6c-e510a650bdff,Javed Ali,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+cd955539-c357-49ee-ac45-2a414440613e,"DANNY AVILA, Sam WOLFE, HNTR, Rome Fortune",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ce525671-f1b3-4636-9204-25be5a0086ae,"Badshah, Amaal Mallik, Fazilpuria, Sukriti Kakar, Neha Kakkar",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ce55e49a-32f4-4757-9849-bf04d06d5fcc,"Kanye West, T-Pain",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ce845387-d7de-459c-891d-a268f0bb366a,Xarnege,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+cf119120-7df5-47d7-9dec-49f8837a4e40,Suzanne Vega,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+cfa75366-4aaa-44bd-8a9f-3c36d55f8fb4,"DANNY AVILA, Sam WOLFE, HNTR, Rome Fortune",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+cfd5e4f3-e73d-4f8e-a315-6b99c7b1c3f7,Miguel Rios,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+d02761d2-8c6e-4576-aa5d-df9197f44ddc,Alvin Stardust,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+d03a54bc-6e07-4c04-a8d4-7fbf2bd07a01,Nils Frahm,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+d05abdd7-3f53-46d5-99de-b5b3743e8dba,"Arijit Singh, Asees Kaur, Tanishk Bagchi",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+d0c7656d-8169-4f77-9dbe-b8f24e40105d,Kali Uchis,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+d0f7f125-5403-4f2e-b7b7-2ba8ef43836e,Dream Academy,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+d0ff507b-51fa-486d-902a-d27c88ff214d,Climax Blues Band,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+d18a2838-05fa-4e4e-bbb5-284a4cfb13f5,The Blaze,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+d352f5dd-3023-4565-a7bb-52396bf8821d,Buddy Holly,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+d5c51c36-ac67-4727-91ed-ee9f0df81a2d,Gloria Gaynor,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+d812139b-51b3-4ed0-8bc3-a4e403c63fed,Vedan Kolod,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+d8bf60ce-d2af-4125-bf19-2b19d6d0c807,Sniff'n The Tears,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+d8c4deaf-4251-4487-b013-1b014864dca4,The Busters,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+db3de4ac-af35-49b1-92c1-10a932c7ef59,JAWNY,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+dbbdffd7-032c-4681-97bd-d4b3a9b3d788,Capud Draconis,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+dbf0a5c5-3665-4495-b13b-99438a6a0900,Melody’s Echo Chamber,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+dc692467-9458-402e-884a-7fd16aede0c1,Gregg Plummer,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+dc84c3f5-a44c-4a46-bf41-fd1640e3c99d,Djo,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+dcf5807c-ef1f-4291-b452-6824080ecac4,"Drake, Birdman",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+de9a19b3-531b-4df3-ae90-4763fe282946,Buddy Holly,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+debabff3-2559-46e5-862d-ef2a906d7010,Hall & Oates,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+deee48aa-f583-4a33-8fe2-3d9690c0adf3,Sydney Youngblood,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+dff236f4-0069-4ff4-ae5c-bf57cdd47edc,Trolska Polska,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+dff42720-17d3-4e3d-bdcf-9381a8dd1db0,Les Humphries Singers,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+e0195400-ad63-4a21-8d56-9a96647cb24e,Shakin' Stevens,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+e01af422-f5ce-42ef-b634-bb01e87e2223,"Shae Gill, Ali Sethi",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+e32f2cd6-8695-4914-9c24-72e02ebd09ee,Alice,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+e39c7351-7110-41e9-9328-ca08df0921cc,Jimmy Ruffin,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+e3fce957-14b8-40d3-9d4c-efc10a3813ef,Vishal Dadlani,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+e51631f7-3ca0-4c1f-b400-9ee1f0ff4a58,Goombay Dance Band,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+e55d138d-53cb-4fe7-88ac-a3b99651d6a8,Arthrn,1,0,1,0,3.0,2.0,0.0,100.0,0.0
+e787de5d-49e2-4b1f-9bde-1fd3a671b971,Fats Domino,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+e7ae37b1-624f-47b9-bf4f-53b52ef19528,Israel Kamakawiwo'ole,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+e7d8a383-60c7-468a-b88f-c6618fbcafda,Nick De La Hoyde,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+e86b5e8c-8a11-40ea-9bb0-551df95e99d4,Nothing,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+e94391ea-ddbc-49b1-9052-bda92816fb70,Tee Set,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+eaca866a-f43a-43f6-8593-48794eae565b,Carlos Cipa,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+eb2f8c3f-8c4c-408a-8944-917283e3bc70,Hot Chocolate,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+eb4a63b5-6870-4082-b9f2-9f7a9f36b900,Kraftklub,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ec4b6d29-527c-4cc0-89bb-8a4775f350d0,Dave Edmunds,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ecd00b8b-f697-4d90-8641-6633af356747,The Linda Lindas,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ecf01dca-8a27-4184-8fe1-dfd26798aa79,A-Wall,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ee72ffc0-0332-44da-a0cd-7c8c81705ff1,H-Blockx,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ef2c6449-d02b-415b-ad8c-c14c08266552,Sun Kil Moon,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ef30fb35-acf6-4bdc-aeb3-fb9b7d6b813d,Richard Sanderson,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ef68170c-6362-44fb-ac8a-4b8e9aaf2b84,Ed Carlsen,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+f16d25c6-556f-42f9-b648-5f48a8f96ec2,Clawfinger,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+f27db7be-0c89-4e60-b245-295180feec90,Luca Hänni,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+f2eef649-a6d5-4114-afba-e50ab26254d2,Sum 41,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+f419170e-7294-4852-88fd-0de2fc46b671,"Sachet Tandon, Parampara Tandon, Kumaar, Sachet-Parampara",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+f4520423-6f7a-4b37-b820-941dbd47459a,Valravn,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+f46bd570-5768-462e-b84c-c7c993bbf47e,Eagles,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+f4abc0b5-3f7a-4eff-8f78-ac078dbce533,Billie Eilish,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+f4b6e451-5dce-4842-a555-f793892299b3,Jane Remover,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+f4efeed3-5999-4e45-a36b-812108b0f15a,Glitter Band,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+f563a1a9-069b-41ed-8b3b-e1b1a6f5b34b,"Drake, Lil Wayne, André 3000",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+f597a611-9dbd-4720-a3f2-4db5228b3876,Hoax,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+f5c4c27e-5902-4fc0-adfb-7775da3d5363,"Kanye West, Mos Def",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+f5e31fda-bbf5-4ab6-8194-bcc9209b53f8,The Romantics,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+f6beac20-5dfe-4d1f-ae02-0b0a740aafd6,"Tyler, the Creator",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+f7afa49d-0e0e-420a-b35f-2f09ffe5026c,Rashid Ali,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+f8332a32-60bc-45db-a9e4-0790cdd93655,"Shreya Ghoshal, Abhijeet",1,0,0,0,1.0,1.0,0.0,0.0,0.0
+f8ac8b36-7604-478e-a9bd-35579ebe9265,Richard Dorfmeister,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+f924d088-c25b-4a6e-8f28-fb4b9e3a2b4b,彩,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+fbb375f9-48bb-4635-824e-4120273b3ba7,Regina Spektor,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+fd80cb81-89bb-4c1f-a981-afa559d364d4,Al Bano & Romina Power,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+fe244e6d-1c11-4d34-b6c5-51f36f2fbac0,H-Blockx,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ff294730-0315-440d-a543-54005779c15b,Mamas & Papas,1,0,0,0,1.0,1.0,0.0,0.0,0.0
+ff4d8f86-9910-44b9-af31-dca51a6638a1,Destroy Boys,1,0,0,0,1.0,1.0,0.0,0.0,0.0

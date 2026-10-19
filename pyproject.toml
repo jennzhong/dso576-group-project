@@ -1,0 +1,20 @@
+[project]
+name = "dso576-cleaning-andy"
+version = "0.1.0"
+description = "Module 6 ListenBrainz data cleaning (Andy Chen)"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas==2.2.3",
+    "ipykernel>=6,<8",
+    "nbconvert>=7,<8",
+    "tabulate>=0.9,<1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

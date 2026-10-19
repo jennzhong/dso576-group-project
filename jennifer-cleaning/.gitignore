@@ -1,0 +1,14 @@
+# Keep the original data and full local validation output out of the submission.
+/data/raw/*.csv
+/data/processed/*.csv
+
+# The report is submitted separately to Gradescope.
+/submission/*.pdf
+
+# Local Python environment and runtime files.
+.venv/
+__pycache__/
+*.py[cod]
+
+# The small cleaned assignment sample is the one CSV submitted to GitHub.
+!/cleaned_sample.csv

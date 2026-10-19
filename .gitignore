@@ -2,3 +2,14 @@
 !cleaned_sample.csv
 __pycache__/
 .DS_Store
+.venv/
+.ipynb_checkpoints/
+
+# Tracked exceptions: the frozen raw source, expected checks, and cleaning outputs
+!listenbrainz_sample.csv
+!record_checks_expected.csv
+!outputs/*.csv
+
+# Phase 2 (Member 4): canonical team input from Member 3 and KPI outputs
+!listenbrainz_final_cleaned.csv
+!outputs_kpi/*.csv
