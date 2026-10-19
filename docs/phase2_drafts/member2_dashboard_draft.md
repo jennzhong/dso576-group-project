@@ -1,3 +1,6 @@
+> **Superseded draft — do not build from this file.** Member 2's early dashboard design,
+> revised and merged into `BUILD_SPEC.md` Section 3, which is the source of truth.
+
 1. Dashboard Overview
 
 Our project focuses on music streaming analytics using ListenBrainz and MusicBrainz data. The dashboard will help music streaming editorial teams identify emerging artists who deserve additional exposure and understand which listener segments are most likely to remain engaged.
