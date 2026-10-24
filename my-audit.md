@@ -6,7 +6,7 @@
 - **Number:** `repeat_listen_pct` in the listener summary, produced by `build_listener_engagement()`.
 - **Version checked:** [b67101fbc3d068b5ba42c31992236bdd6bf5ee59](https://github.com/jennzhong/dso576-group-project/commit/b67101fbc3d068b5ba42c31992236bdd6bf5ee59), the App available on `andy-audit` at the start of this audit. `main` did not contain `app.py`. The independent `lewis-module9-audit` branch starts at this version. No application/backend code or data was changed for this audit.
 - **Requirement source:** [BUILD_SPEC.md](https://github.com/jennzhong/dso576-group-project/blob/b67101fbc3d068b5ba42c31992236bdd6bf5ee59/BUILD_SPEC.md), especially UC3, Section 3 filter scope and Tab 3, and Section 4.
-- **Review status:** AI-assisted draft for Lewis to review before submission. The contribution and AI disclosure below describe who performed the work.
+- **Review status:** AI-assisted draft for me to review before submission. The contribution and AI disclosure below describe who performed the work.
 
 ## 1. Intended user and task
 
