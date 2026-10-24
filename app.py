@@ -161,7 +161,10 @@ def main() -> None:
             if selected_id not in ids:
                 selected_id = shortlist.iloc[0].artist_id
                 st.session_state.selected_artist_id = selected_id
-            artist_id = st.selectbox("Artist", ids, index=ids.index(selected_id),
+            if st.session_state.get("_last_selected_artist_id") != selected_id:
+                st.session_state.artist_picker = selected_id
+                st.session_state._last_selected_artist_id = selected_id
+            artist_id = st.selectbox("Artist", ids,
                                      format_func=lambda x: labels_by_id[x],
                                      key="artist_picker")
             st.session_state.selected_artist_id = artist_id
@@ -187,8 +190,16 @@ def main() -> None:
                 row = engagement.loc[engagement.artist_mbid.eq(artist_id)]
                 if not row.empty:
                     vals = row.iloc[0]
+                    artist_rows = period.loc[period.artist_id.eq(artist_id)]
+                    borrowed_rows = artist_rows.artist_id_source.eq("key_mbid").sum()
+                    m5_events = events.loc[events.artist_mbid.eq(artist_id), "listen_event_id"].nunique()
                     c1, c2, c3 = st.columns(3)
-                    c1.metric("30-day return rate", f"{vals.return_rate_pct:.1f}%")
+                    if borrowed_rows > len(artist_rows) / 2:
+                        c1.metric("30-day return rate", "n/a")
+                        c1.caption("Most M4 listens use a borrowed artist ID; M5 has no direct MBID match for them.")
+                    else:
+                        c1.metric("30-day return rate", f"{vals.return_rate_pct:.1f}%")
+                    c1.caption(f"M5: {m5_events} MBID-matched artist events; M4 assigns {len(artist_rows)} listen rows.")
                     c2.metric("Listeners with 3+ active days", f"{vals.share_3plus_days_pct:.1f}%")
                     c3.metric("Listeners with 3+ tracks", f"{vals.share_3plus_tracks_pct:.1f}%")
                 monthly = m5.build_artist_monthly_growth(events)

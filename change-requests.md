@@ -31,6 +31,6 @@ Audited at commit `f7032fe` plus the untracked `app.py` (sha256 prefix `89a8083f
 
 | ID | Finding | Change | Owner | Status |
 |---|---|---|---|---|
-| CR-1 | F1 | Count a return only on a later UTC day (`date > first date` and `≤ first date + 30 days`), or rename the metric to make clear it includes same-day repeats. Add the small case to `tests/`. | M5 | Open |
-| CR-2 | F2 | On Tab 2, show the M5 row's listen count next to M4's ("based on N of M listens"), or show "n/a" when most of the artist's listens are `key_mbid`. | M5 / app | Open |
-| CR-3 | F3 | Make one place the source of truth for the selected artist: before the selectbox, if `selected_artist_id` changed, copy it into `st.session_state.artist_picker`, and drop the `index=` argument. | app | Open |
+| CR-1 | F1 | Count a return only on a later UTC day (`date > first date` and `≤ first date + 30 days`), or rename the metric to make clear it includes same-day repeats. Add the small case to `tests/`. | M5 | Open: a date-based fix to `build_artist_engagement` exists as an uncommitted local change, for Member 5 to review |
+| CR-2 | F2 | On Tab 2, show the M5 row's listen count next to M4's ("based on N of M listens"), or show "n/a" when most of the artist's listens are `key_mbid`. | M5 / app | App side done (next commit): Tab 2 shows "n/a" when more than half the rows are `key_mbid` and captions both counts. Those counts are worked out in `app.py`, which conflicts with BUILD_SPEC §4 rule 3 |
+| CR-3 | F3 | Make one place the source of truth for the selected artist: before the selectbox, if `selected_artist_id` changed, copy it into `st.session_state.artist_picker`, and drop the `index=` argument. | app | Fixed (next commit); `test_row_click_changes_artist_detail` passes |
