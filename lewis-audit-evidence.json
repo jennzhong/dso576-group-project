@@ -1,0 +1,228 @@
+{
+  "audited_commit": "b67101fbc3d068b5ba42c31992236bdd6bf5ee59",
+  "versions": {
+    "python": "3.12.14",
+    "pandas": "2.2.3",
+    "streamlit": "1.66.0",
+    "plotly": "7.1.0",
+    "pytest": "9.1.1"
+  },
+  "source_sha256": {
+    "app.py": "8f58e5332081f3a14ba9adbae11a97163e80bc2adac57fe01f569fd2d829b942",
+    "listenbrainz_final_cleaned.csv": "6324107e578f3d7d9abd8849a7c8ed5b9c17813cf2f644da65c235fed7ceb652",
+    "member5-aggregations/aggregation_functions.py": "9158b355596e6e842f279e4ac07a7dc577a03689ec9366721e10af3a850235df"
+  },
+  "synthetic": {
+    "inputs": [
+      {
+        "username": "test_listener",
+        "listened_at_utc": "2026-01-01T10:00:00+00:00",
+        "artist_name": "Alpha",
+        "track_name": "Echo",
+        "release_name": "A",
+        "recording_msid": "recording-a"
+      },
+      {
+        "username": "test_listener",
+        "listened_at_utc": "2026-01-01T10:05:00+00:00",
+        "artist_name": "Beta",
+        "track_name": "Echo",
+        "release_name": "B",
+        "recording_msid": "recording-b"
+      },
+      {
+        "username": "test_listener",
+        "listened_at_utc": "2026-01-02T10:00:00+00:00",
+        "artist_name": "Alpha",
+        "track_name": "Echo",
+        "release_name": "A",
+        "recording_msid": "recording-a"
+      }
+    ],
+    "reference": {
+      "total_listens": 3,
+      "distinct_recording_msids": 2,
+      "repeat_listens": 1,
+      "repeat_pct": 33.33,
+      "active_days": 2
+    },
+    "actual_pct": 66.67
+  },
+  "real_single_day": {
+    "inputs": [
+      {
+        "username": "music_af",
+        "listened_at_utc": "2026-03-14T21:01:39+00:00",
+        "artist_name": "Moby",
+        "track_name": "Extreme Ways",
+        "recording_msid": "02e10810-c20f-4bef-92fb-c728042fb641",
+        "recording_mbid": "45864691-1ce9-46d2-bc36-1bb606640b10"
+      },
+      {
+        "username": "music_af",
+        "listened_at_utc": "2026-03-14T21:01:37+00:00",
+        "artist_name": "Armin van Buuren",
+        "track_name": "Extreme Ways",
+        "recording_msid": "103a00bb-6d01-4eec-bcab-f61a2cacac4f",
+        "recording_mbid": "140af53f-7064-4eb5-a9cc-784cc0691051"
+      },
+      {
+        "username": "music_af",
+        "listened_at_utc": "2026-03-14T20:56:07+00:00",
+        "artist_name": "John Powell",
+        "track_name": "Love Scene",
+        "recording_msid": "f2dd01d1-242e-4078-ae01-8d7837b6fbc5",
+        "recording_mbid": "cf35eaa7-3d2b-4bfb-ac81-3109269bbcc3"
+      }
+    ],
+    "reference": {
+      "total_listens": 3,
+      "distinct_recording_msids": 3,
+      "repeat_listens": 0,
+      "repeat_pct": 0.0,
+      "active_days": 1
+    },
+    "actual_pct": 33.33
+  },
+  "feature": {
+    "default": [
+      {
+        "username": "H-music \u00b7 capped",
+        "total_listens": 500,
+        "active_days": 28
+      },
+      {
+        "username": "iliekcomputers \u00b7 capped",
+        "total_listens": 500,
+        "active_days": 24
+      },
+      {
+        "username": "s_john_s \u00b7 capped",
+        "total_listens": 500,
+        "active_days": 8
+      },
+      {
+        "username": "John V",
+        "total_listens": 226,
+        "active_days": 5
+      },
+      {
+        "username": "music_af",
+        "total_listens": 214,
+        "active_days": 33
+      }
+    ],
+    "single_user": [
+      {
+        "username": "music_af",
+        "total_listens": 214,
+        "first_observed_listen": "2025-09-17",
+        "last_observed_listen": "2026-03-25",
+        "observation_days": 190,
+        "active_days": 33,
+        "unique_artists": 77,
+        "listens_per_active_day": 6.48,
+        "repeat_listen_pct": 10.28
+      }
+    ],
+    "single_day": [
+      {
+        "username": "music_af",
+        "total_listens": 3,
+        "first_observed_listen": "2026-03-14",
+        "last_observed_listen": "2026-03-14",
+        "observation_days": 1,
+        "active_days": 1,
+        "unique_artists": 3,
+        "listens_per_active_day": 3.0,
+        "repeat_listen_pct": 33.33
+      }
+    ],
+    "shortlist_scope": [
+      {
+        "username": "music_af",
+        "total_listens": 3,
+        "first_observed_listen": "2026-03-14",
+        "last_observed_listen": "2026-03-14",
+        "observation_days": 1,
+        "active_days": 1,
+        "unique_artists": 3,
+        "listens_per_active_day": 3.0,
+        "repeat_listen_pct": 33.33
+      }
+    ],
+    "shortlist_messages": [
+      "No artists match these filters",
+      "No artist selected"
+    ],
+    "empty_users": {
+      "messages": [
+        "No listens in this period"
+      ],
+      "tables": 0
+    },
+    "empty_period": {
+      "messages": [
+        "No listens in this period"
+      ],
+      "tables": 0
+    }
+  },
+  "full_sample_identity_sensitivity": [
+    {
+      "username": "H-music",
+      "title_based_actual_pct": 62.0,
+      "msid_based_reference": {
+        "total_listens": 500,
+        "distinct_recording_msids": 197,
+        "repeat_listens": 303,
+        "repeat_pct": 60.6,
+        "active_days": 28
+      }
+    },
+    {
+      "username": "John V",
+      "title_based_actual_pct": 18.58,
+      "msid_based_reference": {
+        "total_listens": 226,
+        "distinct_recording_msids": 184,
+        "repeat_listens": 42,
+        "repeat_pct": 18.58,
+        "active_days": 5
+      }
+    },
+    {
+      "username": "iliekcomputers",
+      "title_based_actual_pct": 36.0,
+      "msid_based_reference": {
+        "total_listens": 500,
+        "distinct_recording_msids": 323,
+        "repeat_listens": 177,
+        "repeat_pct": 35.4,
+        "active_days": 24
+      }
+    },
+    {
+      "username": "music_af",
+      "title_based_actual_pct": 10.28,
+      "msid_based_reference": {
+        "total_listens": 214,
+        "distinct_recording_msids": 198,
+        "repeat_listens": 16,
+        "repeat_pct": 7.48,
+        "active_days": 33
+      }
+    },
+    {
+      "username": "s_john_s",
+      "title_based_actual_pct": 15.0,
+      "msid_based_reference": {
+        "total_listens": 500,
+        "distinct_recording_msids": 428,
+        "repeat_listens": 72,
+        "repeat_pct": 14.4,
+        "active_days": 8
+      }
+    }
+  ]
+}
