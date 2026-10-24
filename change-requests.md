@@ -50,12 +50,21 @@ Lewis's separate audit covers the Listeners tab (UC3) and its `repeat_listen_pct
 - **Definition checked:** Replays of the same recording within the current listener/date selection, divided by all logged listens. Title-only repetition is a different possible definition and requires a clear label.
 - **Synthetic evidence:** Alpha/Echo (recording-a), Beta/Echo (recording-b), Alpha/Echo (recording-a): 1 repeat / 3 listens = 33.33%; M5 returns 66.67%.
 - **Real-data and browser evidence:** Select only `music_af`, UTC start=end=2026-03-14, then open Listeners. There are 3 listens: Love Scene by John Powell and Extreme Ways by Armin van Buuren and by Moby. All have distinct recording MSIDs and distinct nonmissing recording MBIDs. The App shows 33.33%; recording-level repetition is 0%. [Screenshot](lewis-audit-app-evidence.jpg).
-- **Feature checks:** Five listener rows/three capped labels, one-listener isolation, inclusive single-day filtering, empty selections/periods and shortlist-filter scope pass the tested states.
-- **Verification:** Lewis checks: 6 passed, 2 strict xfails documenting this unresolved defect. Existing tests/: 23 passed. Independent reference uses standard-library CSV parsing and Counter, plus a hand-calculable small case.
+- **Feature checks:** Five listener rows/three capped labels, one-listener isolation, completed single-day filtering, empty selections/periods and shortlist-filter scope pass the tested states. Incomplete range selection fails separately (L-F2).
+- **Verification:** Lewis checks: 6 passed, 3 strict xfails documenting the unresolved CR-L1/CR-L2 defects. Existing tests/: 23 passed. Independent reference uses standard-library CSV parsing and Counter, plus a hand-calculable small case.
 - **Limits:** This proves a recording-identity collision, not that every MSID difference represents a different recording. Global MSID-based comparisons are sensitivity checks, not corrected ground truth. Interpretation is an AI-assisted draft for Lewis's review; AI assistance is disclosed in the report.
+
+### L-F2 — An incomplete date range raises TypeError (Lewis, AI-assisted)
+
+- **Reproduce:** In the calendar, choose 2026-03-14 as a new range start and pause before choosing the end. The browser server log records an exception; completing the range recovers. Independently run `test_partial_date_range_waits_for_end_date`, which gives AppTest the one-element tuple `(date(2026, 3, 14),)`.
+- **Expected:** Wait for an end date without crashing, or explicitly apply a provisional scalar single day.
+- **Actual:** `Cannot convert input [(datetime.date(2026, 3, 14),)] of type <class 'tuple'> to Timestamp`.
+- **Cause:** `app.py:73-76` unpacks only length-two tuples and otherwise assigns the entire tuple to `start/end`; `kpi_analysis.py:122` then calls `pd.Timestamp(tuple)`.
+- **Scope:** The one-date transition is reproduced; the zero-date state is not tested. Completed-range checks pass. No implementation change was made.
 
 ### Lewis requested change
 
 | ID | Finding | Requested change | Proposed owner | Status |
 |---|---|---|---|---|
 | CR-L1 | L-F1 | Agree and document recording-versus-title repetition. For recording repetition, use a stable recording key with an explicit missing-ID fallback and add the synthetic/real collision checks; retain the documented all-logged denominator. If title repetition is intentional, rename and explain the metric. | M5 / app, subject to team review | Open — audit only; no teammate implementation changed |
+| CR-L2 | L-F2 | Guard incomplete date ranges before filter_period; wait for an end date or deliberately use a scalar provisional single day. Add zero/one/two-date regression cases. | app, subject to team review | Open — audit only; no teammate implementation changed |

@@ -166,6 +166,14 @@
         "No listens in this period"
       ],
       "tables": 0
+    },
+    "partial_range": {
+      "input": [
+        "2026-03-14"
+      ],
+      "exceptions": [
+        "Cannot convert input [(datetime.date(2026, 3, 14),)] of type <class 'tuple'> to Timestamp"
+      ]
     }
   },
   "full_sample_identity_sensitivity": [

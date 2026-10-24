@@ -24,10 +24,17 @@ The unchanged App was run locally with Streamlit. Browser interaction verified s
 | Remove all listeners except `music_af`; retain full period | One listener; 214 logged listens | One row, 214 listens, 33 active days, first observed 2025-09-17 and last observed 2026-03-25 | Pass |
 | `music_af`, UTC start = end = 2026-03-14; open Listeners again if the tab returns to Shortlist | Inclusive single-day selection: 3 listens, 1 active day, 3 artists | Those counts and both observed dates are correct. `repeat_listen_pct` is 33.33, examined separately below. | Filter passes; metric interpretation fails |
 | Same single-day selection; set minimum countable listens to 10,000 | Empty shortlist, listener summary unchanged | “No artists match these filters”; listener summary remains 3 listens and 1 active day | Pass: correct scope |
+| Choose only a range start (2026-03-14), before choosing an end | Wait for the end date without an exception | `TypeError: Cannot convert input [(datetime.date(2026, 3, 14),)] of type <class 'tuple'> to Timestamp` | Fail: CR-L2 |
 | Clear the Listeners selection | No data and no exception | “No listens in this period”; no tables | Pass |
 | Select `music_af` and 2019-03-07 through 2019-03-07 | No data and no exception | Same no-data message; no tables | Pass |
 
-The default listener totals sum to 1,940, which is the canonical extract's row count. These are M5 **all logged listens**, not M4's 1,882 countable listens. That distinction is captioned in the App and is intentionally preserved in this audit's denominator. The feature is usable for the tested filtering task, but its repeat metric needs a clearer recording identity definition.
+The default listener totals sum to 1,940, which is the canonical extract's row count. These are M5 **all logged listens**, not M4's 1,882 countable listens. That distinction is captioned in the App and is intentionally preserved in this audit's denominator. Completed-range filtering is usable in the tested states, but the intermediate one-date range raises an exception (CR-L2), and the repeat metric needs a clearer recording identity definition (CR-L1).
+
+### Partial date-range finding (L-F2 / CR-L2)
+
+The browser test's server log recorded a TypeError after the first calendar click selected 2026-03-14 as the new start, before the second click completed the range. Completing both clicks recovered the App. An AppTest case independently reproduces that intermediate state by setting the date widget value to `(date(2026, 3, 14),)` and rerunning.
+
+`app.py:73-76` unpacks a tuple only when its length is two; otherwise it assigns the entire one-element tuple to both `start` and `end`. That tuple reaches `kpi_analysis._utc_day()` and `pd.Timestamp()` at line 122, causing the exception. Expected behavior is to wait for a complete range (or use a clearly explained provisional single day), rather than pass a tuple where a date is required. This is a feature failure in a normal range-selection transition, even though completed ranges work.
 
 ## 3. Number audit: definition, small case, and code assumption
 
@@ -83,7 +90,8 @@ As a sensitivity check over each user's full history, title versus MSID definiti
 
 - **L-F1 / CR-L1 (open):** The Listeners repeat percentage uses title-only identity. It overstates recording repetition for the verified same-title/different-recording case.
 - **Requested change:** Agree and document whether repetition means a recording or a title. For recording repetition, use a documented stable recording key (for example, recording MBID with an explicit fallback), retain the all-logged-listens denominator unless the contract is deliberately changed, and add collision/regression cases. If title repetition is intentional, rename the displayed metric and explain the title-based rule. Confirm the expected 0% for the real three-row case under the recording definition.
-- Lewis's claim and finding were added to `change-requests.md` only on `lewis-module9-audit`. Andy's claims, findings, requested changes and audit code were preserved. No fix was applied to a teammate's backend or App.
+- **L-F2 / CR-L2 (open):** Guard incomplete date ranges before calling `filter_period`. Show a request to choose the end date, or deliberately pass a scalar date under a documented single-day policy. Add a regression check for zero/one/two selected dates. The one-date failure is reproduced; the zero-date state remains untested.
+- Lewis's claim and findings were added to `change-requests.md` only on `lewis-module9-audit`. Andy's claims, findings, requested changes and audit code were preserved. No fix was applied to a teammate's backend or App.
 
 ## 5. Reproduce the evidence
 
@@ -103,14 +111,14 @@ uv run python -m pytest -q -rx lewis_audit_check.py
 uv run python -m pytest -q tests
 ```
 
-Observed: **6 passed, 2 xfailed** in Lewis's checks; **23 passed** in the existing `tests/` suite. The two strict xfails are the synthetic and real-data failures described above. They explicitly record the unresolved CR-L1 defect and do not mean the defect is fixed. A future repair will cause an unexpected pass until the xfail marks are removed. Existing tests do not cover this title collision. The runs emitted existing timedelta/empty-median warnings but no unexpected failures.
+Observed: **6 passed, 3 xfailed** in Lewis's checks; **23 passed** in the existing `tests/` suite. The three strict xfails are the synthetic/real-data metric failures and the incomplete-range exception described above. They explicitly record the unresolved CR-L1/CR-L2 defects and do not mean the defects are fixed. A future repair will cause an unexpected pass until the xfail marks are removed. Existing tests do not cover this title collision. The runs emitted existing timedelta/empty-median warnings but no unexpected failures.
 
 Runtime used: Python 3.12.14, pandas 2.2.3, Streamlit 1.66.0, Plotly 7.1.0, pytest 9.1.1. Full SHA-256 hashes are in the evidence JSON; the audited `app.py` hash is `8f58e5332081f3a14ba9adbae11a97163e80bc2adac57fe01f569fd2d829b942`.
 
 ## 6. Conclusion, uncertainty and individual/AI contribution
 
-The tested Listeners filtering paths and capped labels satisfy the relevant workflow requirements. The repeat percentage is mathematically consistent with title-string repetition but is misleading if read as recording-level repetition. The real single-day example demonstrates a concrete difference of 33.33 percentage points. CR-L1 requests an agreed definition and corresponding implementation/label change.
+The completed-range filtering paths and capped labels satisfy the tested requirements, but selecting only a date-range start raises a TypeError and fails the user workflow (CR-L2). The repeat percentage is mathematically consistent with title-string repetition but is misleading if read as recording-level repetition. The real single-day example demonstrates a concrete difference of 33.33 percentage points. CR-L1 requests an agreed definition and corresponding implementation/label change.
 
-These checks establish the listed UI states, backend outputs, and the recording-identity counterexample. They do not validate all visual states, deployment, mobile behavior, all identity edge cases, every chart, the correctness of the raw listening history, or any inference about wider market trends. A capped sample and non-overlapping listener windows remain important limits. Partial date selections and arbitrary filter combinations were not exhaustively tested.
+These checks establish the listed UI states, backend outputs, and the recording-identity counterexample. They do not validate all visual states, deployment, mobile behavior, all identity edge cases, every chart, the correctness of the raw listening history, or any inference about wider market trends. A capped sample and non-overlapping listener windows remain important limits. The one-date intermediate range was tested; zero-date states and arbitrary filter combinations were not exhaustively tested.
 
 **Contribution disclosure:** Lewis provided the repository, identified the individual assignment, supplied the name for the report, and required that teammates' portions remain untouched. At Lewis's request, Codex inspected the shared requirements and implementation, selected this separate audit scope, wrote and executed the verification code, operated the local App, assembled the evidence, and drafted this report and Lewis's change request. Andy's row-selection/30-day-return findings were consulted only to avoid duplication and are not claimed here. No independent human execution or final adoption of the judgments is claimed. Lewis should review the metric definition, hand calculation and interpretation, then revise or adopt the conclusions before submitting the report as personal work.

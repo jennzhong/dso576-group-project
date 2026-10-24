@@ -3,7 +3,7 @@
 python lewis_audit_check.py > lewis-audit-evidence.json
 python -m pytest -q lewis_audit_check.py
 
-Two strict xfails document CR-L1; an xfail is an unresolved defect, not a fix.
+Three strict xfails document CR-L1/CR-L2; xfails are unresolved defects, not fixes.
 No application, data, or teammate audit files are modified.
 """
 from __future__ import annotations
@@ -101,6 +101,9 @@ def evidence():
     at.date_input[0].set_value((date(2019, 3, 7), date(2019, 3, 7))).run(timeout=60)
     assert not list(at.exception)
     empty_period = {"messages": [v.value for v in at.info], "tables": len(at.dataframe)}
+    at.date_input[0].set_value((date(2026, 3, 14),)).run(timeout=60)
+    partial_range = {"input": ["2026-03-14"],
+                     "exceptions": [v.value for v in at.exception]}
 
     full_actual = m5.build_listener_engagement(loaded).set_index("username")
     sensitivity = []
@@ -126,7 +129,8 @@ def evidence():
         "feature": {"default": default_rows, "single_user": single,
                     "single_day": one_day, "shortlist_scope": shortlist_scope,
                     "shortlist_messages": shortlist_messages,
-                    "empty_users": empty_users, "empty_period": empty_period},
+                    "empty_users": empty_users, "empty_period": empty_period,
+                    "partial_range": partial_range},
         "full_sample_identity_sensitivity": sensitivity,
     }
 
@@ -186,6 +190,11 @@ def test_empty_selection_and_period_are_safe():
     e = evidence()["feature"]
     for case in ("empty_users", "empty_period"):
         assert e[case] == {"messages": ["No listens in this period"], "tables": 0}
+
+
+@pytest.mark.xfail(strict=True, reason="CR-L2: selecting only a range start raises TypeError")
+def test_partial_date_range_waits_for_end_date():
+    assert evidence()["feature"]["partial_range"]["exceptions"] == []
 
 
 if __name__ == "__main__":
