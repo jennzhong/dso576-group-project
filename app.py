@@ -15,6 +15,33 @@ import kpi_analysis as kpi
 CAPPED = {"H-music", "iliekcomputers", "s_john_s"}
 
 
+def section_heading(number, title):
+    st.markdown(f'<div class="section-heading"><div class="eyebrow">{number} / OVERVIEW</div>'
+                f'<h2>{title}</h2></div>', unsafe_allow_html=True)
+
+
+def style_chart(figure):
+    """Presentation only: preserve every trace and value from the backends."""
+    figure.update_layout(
+        template="plotly_white", paper_bgcolor="#fffef9", plot_bgcolor="#fffef9",
+        font={"family": "Arial, sans-serif", "size": 11, "color": "#687267"},
+        title={"font": {"family": "Georgia, serif", "size": 22, "color": "#263c30"}, "x": 0.04},
+        colorway=["#355c4b", "#b88d70"],
+        margin={"l": 45, "r": 24, "t": 65, "b": 40},
+        legend={"orientation": "h", "y": -0.2, "title_text": ""},
+        hoverlabel={"bgcolor": "#fffef9", "font_color": "#263c30"},
+    )
+    for index, trace in enumerate(figure.data):
+        color = ["#355c4b", "#b88d70"][index % 2]
+        if trace.type == "bar":
+            trace.update(marker_color=color, marker_line_width=0)
+        elif trace.type == "scatter":
+            trace.update(line_color=color, marker_color=color, line_width=2)
+    figure.update_xaxes(gridcolor="#edeee7", zeroline=False, linecolor="#dde0d5")
+    figure.update_yaxes(gridcolor="#edeee7", zeroline=False)
+    return figure
+
+
 @st.cache_data(show_spinner=False)
 def load_data():
     return kpi.load_listens()
@@ -94,7 +121,7 @@ def artist_metrics(summary):
 
 def render_shortlist(data, shortlist, table_key):
     headline = data["headline"]
-    st.subheader("Find artists listeners return to")
+    section_heading("01", "Find artists listeners return to")
     fields = [
         ("Listeners", "listeners", False),
         ("Artists", "artists", False),
@@ -133,7 +160,7 @@ def render_shortlist(data, shortlist, table_key):
 
 
 def render_artist(data, shortlist):
-    st.subheader("Artist detail")
+    section_heading("02", "Artist detail")
     if shortlist.empty:
         st.session_state.pop("selected_artist", None)
         st.info("No artist selected")
@@ -167,7 +194,7 @@ def render_artist(data, shortlist):
         if not monthly.empty:
             figure = px.bar(monthly, x="month", y="total_listens", hover_data=["unique_listeners"],
                             title="Monthly listening for this artist", labels={"month": "Month (UTC)", "total_listens": "All logged listens"})
-            st.plotly_chart(figure, use_container_width=True)
+            st.plotly_chart(style_chart(figure), use_container_width=True, theme=None)
             st.caption("MBID-matched listens · all logged listens. Listeners: " +
                        ", ".join(detail.listeners["username"].map(listener_label)) +
                        ". Separate observation windows; this is listener evidence, not a market trend.")
@@ -183,7 +210,7 @@ def render_artist(data, shortlist):
 
 
 def render_listeners(data):
-    st.subheader("Understand the listeners behind the sample")
+    section_heading("03", "Understand the listeners behind the sample")
     st.caption("All logged listens. Each listener has a different observation window; a capped history is truncated, not an end of engagement.")
     columns = ["username", "total_listens", "first_listen", "last_listen", "observation_days", "active_days",
                "unique_artists", "listens_per_active_day", "repeat_listen_pct"]
@@ -199,38 +226,57 @@ def render_listeners(data):
         daily = data["daily"].loc[data["daily"]["username"] == username]
         figure = px.line(daily, x="date", y=["total_listens", "unique_artists"], markers=True,
                          title=listener_label(username), labels={"date": "Date (UTC)", "value": "Count", "variable": "Metric"})
-        st.plotly_chart(figure, use_container_width=True)
+        st.plotly_chart(style_chart(figure), use_container_width=True, theme=None)
         st.caption("All logged listens · each chart uses this listener's own dates. Only observed days are plotted; lines connect observations.")
     coverage = px.bar(data["coverage"], x="month", y="active_listeners", title="Sampled listeners active per month",
                       labels={"month": "Month (UTC)", "active_listeners": "Sampled listeners"})
     coverage.update_yaxes(dtick=1)
-    st.plotly_chart(coverage, use_container_width=True)
+    st.plotly_chart(style_chart(coverage), use_container_width=True, theme=None)
     st.caption("Observation coverage across the sample, not audience growth or a market trend.")
 
 
 def main():
-    st.set_page_config(page_title="Emerging Artist Discovery", page_icon="🎵", layout="wide")
-    st.title("Emerging Artist Discovery")
-    st.write("Discover artists through repeat engagement, active listening days, and return momentum.")
-    st.info("Small sample: 5 listeners observed in different periods. Results describe these listeners, not artist popularity. Capped histories are truncated.")
+    st.set_page_config(page_title="Emerging Artist Discovery", page_icon="🎵", layout="wide", initial_sidebar_state="expanded")
+    st.markdown(f"<style>{(ROOT / 'dashboard.css').read_text(encoding='utf-8')}</style>", unsafe_allow_html=True)
     listens = load_data()
     first = listens["listened_at_utc"].min().date()
     last = listens["listened_at_utc"].max().date()
     all_users = sorted(listens["username"].unique())
     with st.sidebar:
-        st.header("Explore the sample")
+        st.markdown('''<div class="atlas-brand"><span class="atlas-mark">✳</span>
+            <span class="atlas-wordmark">DISCOVERY<br>ATLAS</span></div>
+            <div class="atlas-edition">LISTENBRAINZ · DSO 576</div>
+            <div class="atlas-nav-label">EXPLORE THE SAMPLE</div>''', unsafe_allow_html=True)
+        st.markdown(f'''<div class="atlas-footer"><strong>A smaller sample. A closer listen.</strong><br>
+            {first:%Y}–{last:%Y} · Historical listening records<br>Repeat engagement, not popularity.</div>''', unsafe_allow_html=True)
+    st.markdown('''<div class="research-masthead"><span>RESEARCH DASHBOARD / LISTENING BEHAVIOR</span>
+        <span>DSO 576 &nbsp; / &nbsp; PHASE 3</span></div>''', unsafe_allow_html=True)
+    st.markdown(f'''<div class="atlas-hero"><div><div class="eyebrow">EMERGING ARTISTS · REPEAT ENGAGEMENT</div>
+        <h1>Emerging Artist <em>Discovery.</em></h1>
+        <p class="hero-description">Discover artists through repeat engagement, active listening days, and return momentum.</p></div>
+        <div class="atlas-coverage"><strong>{first:%Y} — {last:%Y}</strong><small>DATA COVERAGE · UTC</small></div></div>''', unsafe_allow_html=True)
+    st.info("Small sample: 5 listeners observed in different periods. Results describe these listeners, not artist popularity. Capped histories are truncated.")
+    with st.container(border=True, key="filter-toolbar"):
+        period_col, listener_col = st.columns([1.1, 2.4], gap="large")
+        with period_col:
+            dates = st.date_input("Date range (UTC)", value=(first, last), min_value=first, max_value=last, format="YYYY-MM-DD")
+        with listener_col:
+            users = st.multiselect("Listeners", all_users, default=all_users, format_func=listener_label)
         st.caption("Dates and listeners apply to every tab.")
-        dates = st.date_input("Date range (UTC)", value=(first, last), min_value=first, max_value=last, format="YYYY-MM-DD")
-        users = st.multiselect("Listeners", all_users, default=all_users, format_func=listener_label)
-        st.divider()
-        st.subheader("Shortlist filters")
+    shortlist_panel = st.expander("Shortlist filters", expanded=False)
+    with shortlist_panel:
         st.caption("Apply to ranked artists and the artist picker only.")
-        min_listens = st.number_input("Min listens", min_value=1, value=1, step=1)
-        min_days = st.number_input("Min avg active days", min_value=1.0, value=1.0, step=0.5)
-        limit = st.checkbox("Limit maximum listeners", value=False)
-        max_listeners = st.number_input("Max listeners", min_value=1, max_value=len(all_users), value=len(all_users), disabled=not limit)
-        mbid_status = st.selectbox("MBID status", ["any", "mbid", "no_mbid"],
-                                   format_func={"any": "Any", "mbid": "Has MBID", "no_mbid": "No MBID"}.get)
+        controls = st.columns(4)
+        with controls[0]:
+            min_listens = st.number_input("Min listens", min_value=1, value=1, step=1)
+        with controls[1]:
+            min_days = st.number_input("Min avg active days", min_value=1.0, value=1.0, step=0.5)
+        with controls[2]:
+            max_listeners = st.number_input("Max listeners", min_value=1, max_value=len(all_users), value=len(all_users))
+            limit = st.checkbox("Limit maximum listeners", value=False)
+        with controls[3]:
+            mbid_status = st.selectbox("MBID status", ["any", "mbid", "no_mbid"],
+                                       format_func={"any": "Any", "mbid": "Has MBID", "no_mbid": "No MBID"}.get)
     tabs = st.tabs(["Shortlist", "Artist detail", "Listeners"])
     if len(dates) != 2:
         for tab in tabs:
@@ -243,7 +289,7 @@ def main():
         return
     artists = data["artists"]
     labels = artist_labels(artists)
-    with st.sidebar:
+    with shortlist_panel:
         excluded = st.multiselect("Exclude artists", artists["artist_id"].tolist(), format_func=labels.get)
         st.caption("Emerging means the curator's shortlist criteria and exclude list; no popularity metadata is available.")
     shortlist = kpi.apply_emerging_filter(artists, kpi.EmergingFilter(

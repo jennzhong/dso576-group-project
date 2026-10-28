@@ -17,10 +17,11 @@ Or use Python 3.12 with `pip install -r requirements.txt`, then
 
 ## Use
 
-1. Start on **Shortlist**. Date range and listeners apply to all tabs. The seven
+1. Start on **Shortlist** in the left navigation. The date/listener toolbar applies to all tabs. The seven
    cards summarize that selection; shortlist criteria only filter the ranked
    table and Artist detail picker. Minimum average active days of 2 gives 168
    artists with the other defaults unchanged.
+   Open **Shortlist filters** to adjust the advanced criteria or exclude artists.
 2. Select an artist row, then open **Artist detail**. The picker also allows
    direct selection. Filters that remove that artist select the top remaining
    artist. Artist IDs are available in an explicit table column for identity
@@ -52,3 +53,12 @@ confirm that Artist detail follows it.
 No data is fetched from ListenBrainz, no CSV is rewritten, and the M4/M5 metric
 definitions are unchanged. Deployment is outside the MVP scope in the build
 specification; this change supplies a locally runnable Streamlit application.
+
+## Visual design
+
+The interface uses a forest-green navigation rail, warm paper background,
+serif headings, bordered metric cards, and matching green/copper chart colors.
+`dashboard.css` contains the presentation styles; `.streamlit/config.toml`
+sets a consistent light theme for native widgets and data tables. On narrower
+screens the navigation becomes a horizontal tab row. All three views, metric
+values, backend functions, filter defaults, and canonical data remain the same.
