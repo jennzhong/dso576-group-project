@@ -1,3 +1,10 @@
+# Emerging Artist Discovery Dashboard — Phase 3
+
+Run `uv sync --python 3.12`, then `uv run streamlit run app.py` from the repository
+root. See [DASHBOARD.md](DASHBOARD.md) for the three-tab workflow, filter scope,
+data limitations, and validation instructions. Run `uv run pytest -q tests` to
+check the backend and app.
+
 # DSO 576 Phase 2 — Member 3 Deliverables
 
 **Primary output:** `data/listenbrainz_final_cleaned.csv` (1,940 rows, 11 columns; nine source fields plus two analysis-ready fields).
