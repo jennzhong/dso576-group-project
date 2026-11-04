@@ -82,3 +82,22 @@ def test_listener_filter_changes_all_tab_data():
     assert at.tabs[0].metric[0].value == "1"
     assert at.tabs[2].dataframe[0].value["username"].tolist() == ["H-music · capped"]
     assert at.tabs[1].dataframe[0].value["username"].tolist() == ["H-music · capped"]
+
+
+def test_max_listener_input_requires_explicit_filter_enable():
+    at = app()
+    assert widget(at.number_input, "Max listeners").disabled
+    widget(at.checkbox, "Limit maximum listeners").check().run()
+    assert not widget(at.number_input, "Max listeners").disabled
+    widget(at.number_input, "Max listeners").set_value(1).run()
+    assert not at.exception
+    assert at.tabs[0].dataframe[0].value["unique_listeners"].max() == 1
+    assert at.tabs[0].metric[1].value == "669"
+
+
+def test_empty_selection_explains_how_to_recover():
+    at = app()
+    widget(at.multiselect, "Listeners").set_value([]).run()
+    recovery = [caption.value for caption in at.caption if "Select at least one listener" in caption.value]
+    assert len(recovery) == 3
+    assert not at.exception
