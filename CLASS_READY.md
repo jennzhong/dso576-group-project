@@ -2,7 +2,7 @@
 
 The working Streamlit application is on the **dashboard-phase3** branch:
 
-https://github.com/jennzhong/dso576-group-project/tree/dashboard-phase3
+https://github.com/lewisli1027/dso576-group-project/tree/dashboard-phase3
 
 The branch is pushed to GitHub and proposed in PR #6. It can be run directly
 without merging the PR. Select this branch when downloading a ZIP or when
@@ -11,7 +11,7 @@ choosing a source branch in class.
 ## Set up before class
 
 ```sh
-git clone --branch dashboard-phase3 --single-branch https://github.com/jennzhong/dso576-group-project.git
+git clone --branch dashboard-phase3 --single-branch https://github.com/lewisli1027/dso576-group-project.git
 cd dso576-group-project
 uv sync --python 3.12 --locked
 uv run pytest -q tests

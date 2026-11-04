@@ -2,7 +2,8 @@
 
 Assignment: Project MVP, due November 9. Sources: the supplied Phase 3 project
 instructions and Module 11 deployment handout. The host route for this Python
-app is Streamlit Community Cloud; the team GitHub repository stays private.
+app is Streamlit Community Cloud. The assignment requires private source;
+the repository visibility remains a team action.
 
 ## Implementation
 
@@ -38,29 +39,46 @@ app is Streamlit Community Cloud; the team GitHub repository stays private.
 - SHA-256 comparisons confirm the canonical CSV, kpi_analysis.py, and
   aggregation_functions.py are unchanged from the earlier working version.
 - Evaluated the reference selections above directly with the original backend.
-- Public deployment and anonymous live-link checks are deferred at the user's request.
 - GitHub currently shows Public source visibility; the user chose to leave
   that setting for the team to resolve against the assignment's private-source requirement.
 
+## Cloud verification — November 4
+
+- Live URL: https://dso576-group-project-a638hnfcszabvqo6mgvwfs.streamlit.app/
+- Streamlit successfully cloned the dashboard branch and installed the locked
+  dependencies with `uv-sync`; the app rendered without a runtime error.
+- Verified live default totals, minimum average active days = 2 giving 168
+  candidates, and maximum listeners = 1 giving 661 candidates.
+- Changed the artist picker to Taylor Swift and verified 17 countable listens
+  and 8 active days. Checked the monthly artist chart and listener charts.
+- Clearing all listeners removed the artist results and displayed recovery guidance.
+- Reloaded the cloud app successfully after stopping the fresh local preview
+  on port 8503. A new HTTP client with no login credentials returned HTTP 200
+  for the app and `ok` from `/~/+/_stcore/health`.
+- The Streamlit sharing panel's "Make this app public" option is checked.
+  Interactive browser QA used the signed-in developer session; a teammate's
+  full signed-out browser check on a second device remains to be completed.
+- GitHub now redirects the original `jennzhong` repository URL to
+  `lewisli1027/dso576-group-project`; the source is still Public.
+
 ## Deployment settings
 
-- Repository: `jennzhong/dso576-group-project`
+- Current repository: `lewisli1027/dso576-group-project` (original URL redirects here)
 - Branch: `dashboard-phase3`
 - Main file: `app.py`
 - Python: `3.12`
 - Secrets: none; never commit `.streamlit/secrets.toml`
-- Sharing: public app, private source repository
+- Sharing: public app enabled; private source still required by the assignment
 - Dependency manager: Cloud prioritizes the root `uv.lock`
 
 ## Remaining submission gates
 
-- Complete Streamlit sign-in/account authorization and private-repository access.
-- Deploy, read logs if needed, and record the actual `.streamlit.app` URL.
-- Verify anonymous access while the laptop server is stopped. Compare the
-  reference selections above and check a live chart and artist selection.
-- Ask a teammate to open the public URL on another device.
+- Ask a teammate to open and interact with the public URL in a signed-out
+  browser on another device.
+- Resolve the assignment's private-source requirement and confirm instructor
+  repository access. Recheck public app access after any visibility change.
 - Record and upload the demo; verify its link without sign-in.
-- Replace the pending app/video entries in README with verified links.
+- Replace the pending video entry in README with its verified link.
 - Submit all three links on Gradescope, one submission per team, by November 9.
 
 Do not claim these gates passed until the account, deployment, and links have

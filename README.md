@@ -5,10 +5,10 @@ artists deserve a closer look based on repeat engagement in the sample.
 Rankings emphasize listening depth, rather than treating play totals or a
 handful of sampled listeners as market popularity.
 
-- **Live app:** deployment deferred at the user's request. This is not a public URL yet.
+- **Live app:** [Open Discovery Atlas](https://dso576-group-project-a638hnfcszabvqo6mgvwfs.streamlit.app/) — deployed November 4; public access enabled.
 - **Demo video:** recording pending; use the [4–5 minute walkthrough script](DEMO_SCRIPT.md), then replace this line with its viewable link.
-- **Repository:** https://github.com/jennzhong/dso576-group-project
-- **App branch:** `dashboard-phase3` ([PR #6](https://github.com/jennzhong/dso576-group-project/pull/6)).
+- **Repository:** https://github.com/lewisli1027/dso576-group-project (the previous `jennzhong` URL now redirects here).
+- **App branch:** `dashboard-phase3` ([PR #6](https://github.com/lewisli1027/dso576-group-project/pull/6)).
 - **Optional course showcase preference:** Decide later; all-member agreement has not been confirmed.
 - **Repository visibility:** GitHub showed Public on November 4. The assignment requires private source; the team will resolve this setting before submission.
 
@@ -46,7 +46,7 @@ through your own GitHub account, then create an app with:
 
 | Setting | Exact value |
 | --- | --- |
-| Repository | `jennzhong/dso576-group-project` |
+| Repository | `lewisli1027/dso576-group-project` |
 | Branch | `dashboard-phase3` |
 | Main file path | `app.py` |
 | Python version (Advanced settings) | `3.12` |
@@ -58,11 +58,14 @@ app reads. All paths resolve relative to the project, not this laptop. Cloud
 prioritizes `uv.lock`; `requirements.txt` mirrors the same four direct runtime
 pins. No custom build command or separate API service is needed.
 
-After deployment, open the actual `.streamlit.app` URL without an authenticated
-session and with the local server stopped. Confirm the default totals below,
-test two filters, artist selection, a chart, and an empty-result case. Replace
-the pending live-app line above with that verified URL, and keep the deployment
-available through peer review. [Official deployment guide](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy).
+The November 4 deployment passed live checks for the default totals, two
+shortlist filters, artist selection, artist/listener charts, and empty-listener
+recovery. With the fresh local preview stopped, a separate HTTP client without
+login credentials reached the app and received `ok` from its health endpoint.
+Streamlit's sharing panel shows public access enabled. Ask a teammate to test
+the full app in a signed-out browser on another device, and keep the deployment
+available through peer review. [Verification details](PHASE3_CHECKS.md).
+[Official deployment guide](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy).
 
 ## Data scope and limitations
 
