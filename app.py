@@ -116,7 +116,23 @@ def artist_metrics(summary):
         ("Return momentum", "return_momentum", 2, False),
     ]
     for col, (label, key, decimals, percent) in zip(st.columns(6), fields):
-        col.metric(label, number(summary[key], decimals, percent))
+        col.metric(label, number(summary[key], decimals, percent), help=METRIC_HELP.get(key))
+
+
+METRIC_HELP = {
+    "listeners": "Number of sampled listeners with observations inside the selected UTC dates.",
+    "artists": "Artists with at least one countable listen and a resolved identity in this selection.",
+    "countable_listens": "Number of listening events after excluding suspected double-scrobbles within 60 seconds.",
+    "listener_artist_pairs": "Number of distinct listener–artist combinations; each pair has equal weight in the pair return rate.",
+    "pair_return_rate": "Percentage of listener–artist pairs observed on at least two distinct UTC days, within the selected dates.",
+    "pct_artists_with_return": "Percentage of artists with at least one listener returning on a different UTC day.",
+    "artists_with_momentum": "Number of artists with enough return-listening evidence for a momentum estimate.",
+    "unique_listeners": "Number of sampled listeners observed playing this artist in the selected dates.",
+    "return_rate": "Percentage of this artist's listeners observed on at least two distinct UTC days.",
+    "avg_active_days": "Mean number of distinct UTC listening days per listener for this artist; units: days per listener.",
+    "distinct_tracks": "Distinct recording IDs played for this artist, across the selected listeners and dates.",
+    "return_momentum": "Unitless difference between the artist's late-window share of return plays and the listener activity baseline. Positive values indicate a stronger late-window share; n/a means insufficient evidence.",
+}
 
 
 def render_shortlist(data, shortlist, table_key):
@@ -133,12 +149,13 @@ def render_shortlist(data, shortlist, table_key):
     ]
     for offset, columns in ((0, st.columns(4)), (4, st.columns(3))):
         for col, (label, key, percent) in zip(columns, fields[offset:]):
-            col.metric(label, number(headline[key], percent=percent))
+            col.metric(label, number(headline[key], percent=percent), help=METRIC_HELP.get(key))
     st.caption("Cards describe the date/listener selection. Shortlist filters affect only the ranked table and artist picker.")
     st.markdown("#### Ranked artists")
     st.caption("Ranked by return rate, average active days, countable listens, then momentum. Select a row, then open Artist detail.")
     if shortlist.empty:
         st.info("No artists match these filters")
+        st.caption("Try lowering Min listens or Min avg active days, allowing more listeners, choosing Any MBID status, or removing excluded artists.")
     else:
         columns = ["rank", "display_name", "countable_listens", "unique_listeners", "return_rate",
                    "avg_active_days", "distinct_tracks", "median_days_to_return", "return_momentum", "artist_id"]
@@ -164,6 +181,7 @@ def render_artist(data, shortlist):
     if shortlist.empty:
         st.session_state.pop("selected_artist", None)
         st.info("No artist selected")
+        st.caption("Relax the shortlist filters, then choose an artist from the ranked table or artist picker.")
         return
     options = shortlist["artist_id"].tolist()
     if st.session_state.get("selected_artist") not in options:
@@ -175,8 +193,10 @@ def render_artist(data, shortlist):
     st.caption(f"Artist ID: {artist_id} · First observed listen: {detail.summary['first_listen_utc']:%Y-%m-%d}")
     st.markdown("#### 30-day return and depth")
     st.caption("MBID-matched listens · all logged listens. These figures use each row's own MBID and exclude name-only identity matches.")
+    st.caption("30-day return includes any later logged play within 30 days of the first observed play, even on the same day. It differs from M4's return rate, which requires distinct UTC days. Depth shares use distinct days and recording MBIDs; name-only tracks are not counted in M5 track depth.")
     if artist_id.startswith("name:"):
         st.info("n/a — no MBID")
+        st.caption("Use the countable-listen, listener, and track metrics below. The artist remains in the shortlist; only MBID-dependent analysis is unavailable.")
     else:
         engagement = data["engagement"]
         match = engagement.loc[engagement["artist_mbid"] == artist_id] if not engagement.empty else engagement
@@ -272,8 +292,8 @@ def main():
         with controls[1]:
             min_days = st.number_input("Min avg active days", min_value=1.0, value=1.0, step=0.5)
         with controls[2]:
-            max_listeners = st.number_input("Max listeners", min_value=1, max_value=len(all_users), value=len(all_users))
             limit = st.checkbox("Limit maximum listeners", value=False)
+            max_listeners = st.number_input("Max listeners", min_value=1, max_value=len(all_users), value=len(all_users), disabled=not limit)
         with controls[3]:
             mbid_status = st.selectbox("MBID status", ["any", "mbid", "no_mbid"],
                                        format_func={"any": "Any", "mbid": "Has MBID", "no_mbid": "No MBID"}.get)
@@ -281,11 +301,13 @@ def main():
     if len(dates) != 2:
         for tab in tabs:
             tab.info("Select a start and end date")
+            tab.caption("Choose both UTC dates in the date-range control to show the selected listening history.")
         return
     data = selection_data(dates[0], dates[1], tuple(sorted(users)))
     if data["listens"].empty:
         for tab in tabs:
             tab.info("No listens in this period")
+            tab.caption("Select at least one listener and broaden the UTC date range. This sample has observations in 2019 and 2024–2026, with gaps between listener windows.")
         return
     artists = data["artists"]
     labels = artist_labels(artists)

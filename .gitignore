@@ -3,6 +3,8 @@
 __pycache__/
 .DS_Store
 .venv/
+.streamlit/secrets.toml
+.env
 .ipynb_checkpoints/
 
 # Tracked exceptions: the frozen raw source, expected checks, and cleaning outputs

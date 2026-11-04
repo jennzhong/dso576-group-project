@@ -47,6 +47,7 @@ If that port is occupied, run `bash run_dashboard.sh --server.port 8502`.
 
 The frozen canonical input is `listenbrainz_final_cleaned.csv` (1,940 rows).
 M4/M5 retain the team's calculation rules. The interface, source data,
-dependencies, and tests are all in this repository. Nothing here requires
-a public deployment before class; follow the instructor's hosting steps
-with this Streamlit app as the source.
+dependencies, and tests are all in this repository. These steps cover local
+class preparation. The November 9 Phase 3 submission additionally requires a
+public, no-login deployment and a viewable demo video; follow README and
+PHASE3_CHECKS.md before submitting.

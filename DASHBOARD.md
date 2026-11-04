@@ -51,8 +51,9 @@ Streamlit testing API. Browser QA should additionally select a table row and
 confirm that Artist detail follows it.
 
 No data is fetched from ListenBrainz, no CSV is rewritten, and the M4/M5 metric
-definitions are unchanged. Deployment is outside the MVP scope in the build
-specification; this change supplies a locally runnable Streamlit application.
+definitions are unchanged. The Phase 3 assignment requires a public deployment;
+use the exact Streamlit Community Cloud settings in README and verify the
+live app against PHASE3_CHECKS.md.
 
 ## Visual design
 
